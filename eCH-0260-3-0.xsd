@@ -291,11 +291,6 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Prüfungsjahr im Format YYYY</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="apprentice" type="eCH-0260:apprenticeLightType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Lernende Person ohne gesetzliche Vertretung</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="comments" type="eCH-0260:commentType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Freitext-Bemerkungsfeld</xs:documentation>
