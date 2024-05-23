@@ -1,0 +1,3140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bearbeitet mit XMLSpy v2024 (x64) (http://www.altova.com) von Marc Fuhrer (SDBB CSFO) -->
+<!--
+Entwurf - Stand 02.04.2024
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0260="http://www.ech.ch/xmlns/eCH-0260/2" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/8" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/9" xmlns:eCH-0021="http://www.ech.ch/xmlns/eCH-0021/8" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/6" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" targetNamespace="http://www.ech.ch/xmlns/eCH-0260/2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<xs:annotation>
+		<xs:documentation xml:lang="de">ENTWURF -- Ausgabedatum: 29.11.2023</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0007/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0007/6/eCH-0007-6-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0008/3" schemaLocation="http://www.ech.ch/xmlns/eCH-0008/3/eCH-0008-3-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0010/8" schemaLocation="http://www.ech.ch/xmlns/eCH-0010/8/eCH-0010-8-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0011/9" schemaLocation="http://www.ech.ch/xmlns/eCH-0011/9/eCH-0011-9-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0021/8" schemaLocation="http://www.ech.ch/xmlns/eCH-0021/8/eCH-0021-8-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0044/4" schemaLocation="http://www.ech.ch/xmlns/eCH-0044/4/eCH-0044-4-1.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0046/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0046/6/eCH-0046-6-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="http://www.ech.ch/xmlns/eCH-0108/7/eCH-0108-7-0.xsd"/>
+	<!--Hauptdatentypen-->
+	<xs:complexType name="apprenticeshipPlaceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Daten zu offenen Lehrstellen</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="canton" type="eCH-0007:cantonFlAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrortkanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hostCompanyId" type="eCH-0260:hostCompanyIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationContact" type="eCH-0260:applicationContactType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontakt für die Bewerbung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="onlineApplications" type="eCH-0260:onlineApplicationsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Online-Bewerbungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apprenticeshipPosting" type="eCH-0260:apprenticeshipType" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrstellenausschreibung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VETaccreditationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Daten zur Bildungsbewilligung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="canton" type="eCH-0007:cantonFlAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrortkanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="legalUnit" type="eCH-0260:legalUnitType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktdaten des Unternehmens</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hostCompany" type="eCH-0260:hostCompanyType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktdaten des Lehrorts</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="trialApprenticeshipOffer">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angebot an Schnupperlehren</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation>keine Schnupperlehre(n)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation>Schnupperlehre, keine Publikation</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation>Schnupperlehre mit Publikation </xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="trialApprenticeshipContact" type="eCH-0260:trialOrPreApprenticeshipContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktdaten für Schnupperlehren</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="preApprenticeshipOffer">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angebot an Vorlehren</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation xml:lang="de">
+								<xs:documentation>keine Vorlehre(n)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation xml:lang="de">
+								<xs:documentation>Vorlehre, keine Publikation</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation xml:lang="de">
+								<xs:documentation>Vorlehre mit Publikation </xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="preApprenticeshipContact" type="eCH-0260:trialOrPreApprenticeshipContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktdaten für Vorlehren</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="options" type="eCH-0260:VETaccreditationOptionsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Optionen zur Berufsbewilligung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VETaccreditationTerminationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Auflösung Bildungsbewilligung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hostCompanyId" type="eCH-0260:hostCompanyIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="terminationDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Datum der Auflösung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="educationRelationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Bildungsverhältnis</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apprentice" type="eCH-0260:apprenticeType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lernende Person (Personenangaben von Lernenden, Validierungskandidaten, Kandidaten nach Art. 32)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationDetails" type="eCH-0260:educationDetailsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ausbildungsdetails</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractPart" type="eCH-0260:contractPartType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Teilverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="previousEducationRelationId" type="eCH-0260:educationRelationIdType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vorgängiges Bildungsverhältnis (z.B. bei neuem Bildungsverhältnis nach einer Auflösung)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="additionalEducationRelationship" type="eCH-0260:additionalEducationRelationshipType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zusätzliche Ausbildungsbeziehungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bemerkungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="extendedEducationRelationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Erweitertes Bildungsverhältnis</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelation" type="eCH-0260:educationRelationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolYearDetails" type="eCH-0260:schoolYearDetailsType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schuljahrdetails</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="examAssignmentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Prüfungszuweisung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="examAssignmentKind" type="eCH-0260:examAssignmentKindType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Art der Prüfungszuweisung Art der Prüfungszuweisung (Zuweisung setzen, Zuweisung austragen)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationRelation" type="eCH-0260:educationRelationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examCompany" type="eCH-0260:hostCompanyType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsbetrieb
+Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="repetitionWithoutContract" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Wiederholung ohne Lehrvertrag
+(false: nicht relevant/mit Lehrvertrag; 
+true: Wiederholung ohne Lehrvertrag)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examElementInitial" type="eCH-0260:examElementInitialType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Betroffene Prüfungselemente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examPeriod">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsperiode</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Frühling</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Sommer (Standardwert)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Herbst</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Winter</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examYear" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsjahr im Format YYYY</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comments" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Freitext-Bemerkungsfeld</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="schoolAttendanceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Schulbesuchsdaten</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolCanton" type="eCH-0007:cantonFlAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schulortkanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolId" type="eCH-0260:schoolIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator Berufsfachschule</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolYearDetails" type="eCH-0260:schoolYearDetailsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schuljahrdetails</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="mutationPersonType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Mutation Personendaten</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mutationApprentice" type="eCH-0260:apprenticeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lernende Personen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mutationVETtrainer" type="eCH-0260:VETtrainerType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/innen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mutationLegalUnit" type="eCH-0260:legalUnitType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Rechtliche Einheit (Unternehmen)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mutationHostCompany" type="eCH-0260:hostCompanyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="mutationEducationRelationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Mutation Bildungsverhältnis</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationDetails" type="eCH-0260:educationDetailsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ausbildungsdetails</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractPart" type="eCH-0260:contractPartType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Teilverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationMutationReason" type="eCH-0260:educationMutationReasonType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mutationsgrund</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kommentar (nur wenn Grund = Anderer Grund)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deregistrationFromOrganisationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Abmeldung Person an eine Organisation</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="deregistrationDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Abmeldungsdatum (letzter Tag, an dem die alte Organisation gültig ist bzw. war)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deregistrationKind">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Art der Abmeldung</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Grundbildung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">BM</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">üK</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="4">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Prüfung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="contractPartId" type="eCH-0260:contractPartIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Teilverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator der abgehenden Organisation</xs:documentation>
+				</xs:annotation>
+				<xs:element name="schoolId" type="eCH-0260:schoolIdType"/>
+				<xs:element name="branchCoursesOrganisationId" type="eCH-0260:branchCoursesOrganisationIdType"/>
+				<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType"/>
+			</xs:choice>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kommentar</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="terminationEducationRelationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Auflösung Bildungsverhältnis / Lehrvertrag</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="terminateEducationRelation" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Wird ganzes BV aufgelöst?</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractPartId" type="eCH-0260:contractPartIdType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Teilverhältnis-IDs, welche aufgelöst werden. Wird das ganze Bildungsverhältnis aufgelöst, sollen keine Teilverhältnis-IDs geliefert werden.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractTerminationDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Datum der Auflösung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QPgradesType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">QV-Noten</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examYear" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsjahr im Format YYYY</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examElementFinal" type="eCH-0260:examElementFinalType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungselemente (inkl. Noten pro Fach. Es muss sichergestellt werden, dass die Note nach Ablauf Beschwerdefrist nicht mehr geändert werden kann)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QPgradesResponsesType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Antwort auf QV-Noten</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examYear" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsjahr im Format YYYY</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examElementFinalResponse" type="eCH-0260:examElementFinalResponseType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Rückmeldung für die in der ursprünglichen Meldung gesendeten Prüfungselemente (Antwortcode). </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dbResponseExamOrganisationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Daten zur Prüfungsorganisation aus der zentralen Datenbank</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="examAssignment" type="eCH-0260:examAssignmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungszuweisung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deregistrationFromOrganisation" type="eCH-0260:deregistrationFromOrganisationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Abmeldung von einer Organisation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dbResponseCourseOrganisationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Daten zur üK-Organisation aus der zentralen Datenbank</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="extendedEducationRelation" type="eCH-0260:extendedEducationRelationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Erweitertes Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mutationPerson" type="eCH-0260:mutationPersonType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mutation Personendaten</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mutationEducationRelation" type="eCH-0260:mutationEducationRelationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mutation Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deregistrationFromOrganisation" type="eCH-0260:deregistrationFromOrganisationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Abmeldung von einer Organisation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="terminationEducationRelation" type="eCH-0260:terminationEducationRelationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Auflösung Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Hilfsdatentypen-->
+	<xs:complexType name="additionalEducationRelationshipType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Zusätzliche Ausbildungsbeziehungen</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="caseManager" type="eCH-0044:personIdentificationLightType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Fallführende Person </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="handingOverTeacher" type="eCH-0010:personMailAddressInfoType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Abgebende Lehrkraft</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="associatedOrganisation" type="eCH-0010:organisationNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zugehörige Organisation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="email" type="eCH-0046:emailAddressType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse des Kontakts</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="relation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Art der Beziehung</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="trialOrPreApprenticeshipContactType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Kontakt bei Vorlehre oder Schnupperlehre</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contactPersonName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktperson Name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contactPersonFirstName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktperson Vorname</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contactPersonSex" type="eCH-0044:sexType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktperson Geschlecht (1=männlich, 2=weiblich, 3=unbestimmt)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageOfCorrespondance" type="eCH-0011:languageType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer (Geschäft, Mobil; ausschliesslich Ziffern (keine Leerschläge oder Trennzeichen) mit lokaler (0) oder internationaler (00) Vorwahl)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bemerkungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="applicationContactType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Bewerbungskontakt</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="companyName" type="eCH-0108:unitNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Name des Unternehmens
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="companyAdditionalName" type="eCH-0108:unitNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Namenszusatz 1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="companyTranslatedName" type="eCH-0108:unitNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Namenszusatz 2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contactPersonName" type="eCH-0044:baseNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktperson Name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contactPersonFirstName" type="eCH-0044:baseNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktperson Vorname</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contactPersonSex" type="eCH-0044:sexType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktperson Geschlecht (1=männlich, 2=weiblich, 3=unbestimmt)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mainAddress" type="eCH-0108:mainAddressType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="postOfficeBox" type="eCH-0260:postOfficeBoxType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postfach</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageOfCorrespondance" type="eCH-0011:languageType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer (Geschäft, Mobil)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="apprenticeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lernende Person</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="callName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Rufname der Person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="domicilAddress" type="eCH-0010:addressInformationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hauptadresse (offizieller Wohnsitz)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contactAddress" type="eCH-0010:addressInformationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzadresse (falls abweichend zur Hauptadresse)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="firstLanguage" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Erstsprache (Codierung gemäss SDL)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="placeOfOrigin" type="eCH-0011:placeOfOriginType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Heimatort und Kanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nationality" type="eCH-0011:nationalityDataType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nationalität (inkl. «staatenlos» und «unbekannt»)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="email" type="eCH-0260:emailContactType" minOccurs="0" maxOccurs="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adressen (Schul-, Geschäft-, Privat). Typ beinhaltet sowohl E-Mail selbst als auch optionale Kategoriesierung.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummern (Festnetz (Privat), Mobilnummer, all. Geschäft)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="representative" type="eCH-0260:representativeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Gesetzliche Vertretungen resp. Ansprechpersonen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="apprenticeLightType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lernende Person ohne GV</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:sequence>
+				<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="callName" type="eCH-0044:baseNameType">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Rufname der Person</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="domicilAddress" type="eCH-0010:addressInformationType">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Hauptadresse (offizieller Wohnsitz)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="contactAddress" type="eCH-0010:addressInformationType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Korrespondenzadresse (falls abweichend zur Hauptadresse)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="firstLanguage" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Erstsprache (Codierung gemäss SDL)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:totalDigits value="3"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="placeOfOrigin" type="eCH-0011:placeOfOriginType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Heimatort und Kanton</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="nationality" type="eCH-0011:nationalityDataType">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Nationalität (inkl. «staatenlos» und «unbekannt»)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="email" type="eCH-0260:emailContactType" minOccurs="0" maxOccurs="3">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">E-Mail-Adressen (Schul-, Geschäft-, Privat). Typ beinhaltet sowohl E-Mail selbst als auch optionale Kategoriesierung.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="3">
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Telefonnummern (Festnetz (Privat), Mobilnummer, allg. Geschäft)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="apprenticeshipType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lehrstelle</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="startYear" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Jahr Lehrbeginn (Format YYYY)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numberOpenings">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Anzahl Stellen</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="numberPlannedOpenings" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Anzahl geplanter Stellen</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="applicationDeadline" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bewerbungsfrist (Format YYYY-MM-DD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bemerkungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="urlOnlineApplication" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">URL für Online-Bewerbung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailOnlineApplication" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail für Online-Bewerbung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apprenticeshipPlaceOptions" type="eCH-0260:apprenticeshipPlaceOptionsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Optionen Lehrstellenausschreibung
+Codeliste "Optionen Lehrstellenausschreibung", siehe https://www.sbbk.ch/dienstleistungen/datenaustausch  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="language" type="eCH-0011:languageType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Betriebliche Ausbildungssprache</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lastEvaluationDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Datum letzte inhaltliche Überprüfung der Lehrstellen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="apprenticeshipPlaceOptionsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Optionen zur Lehrstellenausschreibung</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="10"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bmTypeIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsmaturitätsrichtung</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="branchCoursesOrganisationIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">üK-Organisiation</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="UK[A-Z]{1}[A-Za-z0-9_-]{1,47}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="commentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Freitext-Kommentarfeld</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="300"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="contractPartType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Teilverhältnis</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contractPartId" type="eCH-0260:contractPartIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator Teilverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="canton" type="eCH-0007:cantonFlAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrortkanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Gültigkeitsdauer Start</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Gültigkeitsdauer Ende</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationContract" type="eCH-0260:educationContractType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bildungsvertrag (Lehr-/Praktikumsvertrag)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="repetitionWithoutContract" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Wiederholung ohne Lehrvertrag (false: nicht relevant/mit Lehrvertrag; true: Wiederholung ohne Lehrvertrag)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="previousApprenticeshipContract" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vorgängerlehrvertrag  (nur LV-Nummer) z.B. bei Kettenlehrverträgen und Fortsetzungslehrverträgen</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="school" type="eCH-0260:schoolType" minOccurs="0" maxOccurs="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schulen (Grundbildung/BM)
+Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen angeboten werden</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsSchoolMaterial" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="branchCoursesOrganisationId" type="eCH-0260:branchCoursesOrganisationIdType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">üK-Organisation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="contractPartIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Identifikator Teilverhältnis</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="TVX[A-Z]{2}\d{9}\.\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="dispensationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dispens</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dispensationABU" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Dispens ABU</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">keine Dispensation</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Dispensation aufgrund BM</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Dispensation aufgrund Vorbildung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dispensationExtra" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Dispens ausserordentlich (Fächer/SBBK-Codes oder Freitext)</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="educationContractType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Bildungsvertrag</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hostCompany" type="eCH-0260:hostCompanyType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehr-/Praktikumsbetrieb </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VETtrainer" type="eCH-0260:VETtrainerType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/in </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="additionalEducationRelationship" type="eCH-0260:additionalEducationRelationshipType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zusätzliche Ausbildungsbeziehungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="educationDetailsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Ausbildungsdetails</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="beginDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ausbildungsbeginn</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ausbildungsende</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="originalTrainingStart" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ursprünglicher Ausbildungsbeginn
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examYear" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsjahr</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="eduSpecifications" type="eCH-0260:eduSpecificationsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Weitere Spezifikationen zur Ausbildung (Bildungstyp, optional Zusatz/Präzisierung (Lehrart), optional Vorbildung/Erstberuf (Freitext))</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dispensation" type="eCH-0260:dispensationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Dispensationen (ABU oder ausserordentlich (Freitext))</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bmTypeId" type="eCH-0260:bmTypeIdType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsmaturitätsrichtung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator Prüfungskommission </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="educationMutationReasonType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Mutationsgrund</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:length value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="educationRelationIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Identifikator Bildungsverhältnis</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="BVX[A-Z]{2}\d{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="eduSpecificationsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Weitere Spezifikationen zur Ausbildung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="education">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Bildungstyp</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:length value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="addition" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Zusatz/Präzisierung (Lehrart)</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="firstOccupation" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Vorbildung/Erstberuf (Freitext)</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="costCoverage" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Kanton:
+Dieses Feld wird nur übermittelt, wenn der Bildungstyp «Art. 32» ist. 
+Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werden. In diesem Fall wird der Wert auf «true» gesetzt. Andernfalls wird der Wert auf «false» gesetzt.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="emailContactType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">E-Mailadresse</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="emailAddress" type="eCH-0046:emailAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddressCategory" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Art der E-Mail-Adresse</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Schule</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Geschäft</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Privat</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="examAssignmentKindType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Art der Prüfungszuweisung</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zuweisung setzen</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zuweisung austragen</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="examCommissionIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Identifikator Prüfungskommission</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="PK[A-Z]{1}[A-Za-z0-9_-]{1,47}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="examElementFinalType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Prüfungselement Final</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="examElementCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Codierung des Prüfungsfaches inkl. Zuteilung zu den Berufen.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="99999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examType">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Prüfungsart</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Lehrabschluss</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Teilprüfung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="assessmentType">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Bewertungsart</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Note (zwischen 1,0 und 6,0)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Punkte</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Boolescher Wert (0=nicht erfüllt oder 1=erfüllt; z.B. bei Röntgenberechtigung, Prüfungserfolg)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examRepetition">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Prüfungswiederholung</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Erste Prüfung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">1. Wiederholung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">2. Wiederholung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="noteControl">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Steuerfeld Noten</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Kein Noteneintrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Noteneintrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Dispensation</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">nicht relevant (z.B. bei Wahlpflichtfächern)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="4">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Berufsmaturität (BMS)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="5">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">unentschuldigt nicht abgelegt</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examValue" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Erreichte Note, Punkte oder bestanden/Nicht bestanden. Kein Wert falls dispensiert.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Erreichte Note, Punkte oder bestanden/Nicht bestanden. Kein Wert falls dispensiert.</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="examElementFinalResponseType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Antwort Prüfungselement Final</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="examElementCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Codierung des Prüfungsfaches inkl. Zuteilung zu den Berufen.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="99999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examResponseCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Antwortcode</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="examElementInitialType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Prüfungselement Initial</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="canton" type="eCH-0007:cantonFlAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungskanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examElementCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Codierung des Prüfungsfaches inkl. Zuteilung zu den Berufen.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="99999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examType">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Prüfungsart</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Lehrabschluss</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Teilprüfung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="examLanguage" type="eCH-0011:languageType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungssprache</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examRelief" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungserleichterung (Nachteilsausgleich, z. B. Zeitgutschrift oder Verwendung von Hilfsmitteln), 
+Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (die Unterlagen dazu sind separat zuzustellen und allenfalls via Kommentarfeld zu vermerken), sonst «false».</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examRepetition">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Prüfungswiederholung</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Erste Prüfung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">1. Wiederholung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">2. Wiederholung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="noteControl">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Steuerfeld Noten</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Kein Noteneintrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Noteneintrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Dispensation</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">nicht relevant (z.B. bei Wahlpflichtfächern)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="4">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Berufsmaturität (BMS)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="5">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">unentschuldigt nicht abgelegt</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="hostCompanyCategoryType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Unternehmenstyp/Kategorie</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Praktikumsbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vorlehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Arbeitgeber</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">SOG-Schule</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="hostCompanyIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Identifikator Lehrort</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="LBX[A-Za-z0-9_-]{1,47}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="hostCompanyType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lehrort</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hostCompanyId" type="eCH-0260:hostCompanyIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="localId" type="eCH-0108:localIdType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">BUR-Nummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="centrallyManaged" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe, ob die Lehrstellendaten zentral auf LSR gepflegt werden (false = nein, true = ja).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organisationName" type="eCH-0010:organisationNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Name des Unternehmens</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mainAddress" type="eCH-0108:mainAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktadresse (Standortadresse)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="postOfficeBox" type="eCH-0260:postOfficeBoxType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postfach</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumber" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageOfCorrespondance">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0011:languageType">
+						<xs:enumeration value="de"/>
+						<xs:enumeration value="fr"/>
+						<xs:enumeration value="it"/>
+						<xs:enumeration value="rm"/>
+						<xs:enumeration value="en"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="hostCompanyCategory" type="eCH-0260:hostCompanyCategoryType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Unternehmenstyp/Kategorie</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="legalUnitType">
+		<xs:sequence>
+			<xs:element name="uid" type="eCH-0108:uidType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">UID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organisationName" type="eCH-0010:organisationNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Name des Unternehmens</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mainAddress" type="eCH-0108:mainAddressType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzadresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="postOfficeBox" type="eCH-0260:postOfficeBoxType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postfach</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumber" type="eCH-0260:phoneContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="onlineApplicationsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Onlinebewerbung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="publishContact" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bewerbung: Kontakt publizieren (falls «true»: Inhalte des Elements «applicationContact» werden auf Lehrstellenportalen publiziert)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="publishUrl" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">URL für Online-Bewerbung publizieren (falls «true»: Inhalte der Elemente «urlOnlineApplication» aus dem Element «apprenticeship» werden auf Lehrstellenportalen publiziert)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="publishEmail" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail für Online-Bewerbung publizieren (falls «true»: Inhalte der Elemente «emailOnlineApplication» aus dem Element «apprenticeship» werden auf Lehrstellenportalen publiziert)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="personIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Identifikator Person</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="PPX[A-Za-z0-9_-]{1,47}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="phoneContactType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="phoneNumber" type="eCH-0046:phoneNumberType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumberCategory" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Art der Telefonnummer</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Schule</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Geschäft</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Privat</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="4">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Mobil</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="postOfficeBoxType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Postfacah</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="postOfficeBoxName">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postfachbezeichnung</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="postOfficeBoxNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postfachnummer</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="99999999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="professionType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Beruf</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="professionId" type="eCH-0260:professionIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsnummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="professionVariant" type="eCH-0260:professionVariantType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsvariante</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="professionIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsnummer</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="10000"/>
+			<xs:maxInclusive value="99999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="professionVariantType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsvariante</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="representativeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Gesetzliche Vertretung / Ansprechperson</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="represenativeId" type="eCH-0260:personIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator Person </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mailAddress" type="eCH-0010:mailAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Adresse, unterscheidet zwischen Personen und Organisationen (inkl. Ansprechperson) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vn" type="eCH-0044:vnType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Sozialversicherungsnummer (wenn vorhanden)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateOfBirth" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geburtsdatum (wenn vorhanden)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageOfCorrespondance" type="eCH-0011:languageType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="typeOfRelationship" type="eCH-0021:typeOfRelationshipType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beziehungstyp</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="care" type="eCH-0021:careType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Elterliche Sorge</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isMainContact" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hauptkontakt: Der Wert wird auf «true» gesetzt, falls es sich um den Hauptkontakt handelt. Ansonsten ist der Wert «false» .</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="schoolIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Identifikator Berufsfachschule</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="BS[A-Z]{1}[A-Za-z0-9_-]{1,47}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="schoolKindType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsfachschule Art</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hauptschule</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">BM</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Weitere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="schoolType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Schule</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="startDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Gültigkeitsdauer Start
+Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen, z.B. wenn Schulortwechsel von Beginn weg bekannt sind.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Gültigkeitsdauer Ende</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolKind" type="eCH-0260:schoolKindType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsfachschule Art</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolId" type="eCH-0260:schoolIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator Berufsfachschule </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolLanguage">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Unterrichtssprache</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0011:languageType">
+						<xs:enumeration value="de">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Deutsch</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="fr">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Französisch</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="it">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Italienisch</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="rm">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Rätoromanisch</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="en">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Englisch</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Weitere Details </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="schoolHalfDaysType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Schulhalbtage</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:length value="14"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="schoolYearType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Schuljahr</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="\d{4}/\d{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="schoolYearDetailsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Schuljahrdetails</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="schoolYear" type="xs:token">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schuljahr (im Format YYYY/YYYY)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolTerm">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Semester</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">ganzjährig</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Herbstsemester</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Frühlingssemester</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="schoolHalfDays" type="eCH-0260:schoolHalfDaysType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schulhalbtage</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="className" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Klassenbezeichnung der Grundbildung</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Klassenbezeichnung der Grundbildung</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schulische E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="VETaccreditationOptionsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Optionen zur Bildungsbewilligung</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="10"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VETtrainerType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsbildner</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="VETtrainerId" type="eCH-0260:personIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator Berufsbildner</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isMainResponsible" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hauptverantwortlich gemäss Bildungsbewilligung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="domicilAddress" type="eCH-0010:addressInformationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hauptadresse (offizieller Wohnsitz)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer (Geschäft, Mobil)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0260:emailContactType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VETtrainerRoleId">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Beschreibung der Berufsbildner-Rolle</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Hauptverantwortlicher Berufsbildner (Ansprechperson für Kantone betr. aller Lehrverhältnisse einer Ausbildungsbewilligung) </xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">weiterer Berufsbildner (Qualifizierter Berufsbildner der innerhalb einer Ausbildungsbewilligung für die gesamte Ausbildung von bestimmten Lernenden zuständig ist)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Praxisbildner/Vorlehrberufsbildner</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Lehrvertragsformular-->
+	<xs:complexType name="contractFormType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lehrvertragsformular</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="formVersion">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Formularversion</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="formLanguage">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vertragssprache, eingeschränkt auf die Sprachen Deutsch, Französisch, Italienisch, Rätoromanisch, Englisch</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0011:languageType">
+						<xs:enumeration value="de"/>
+						<xs:enumeration value="fr"/>
+						<xs:enumeration value="it"/>
+						<xs:enumeration value="rm"/>
+						<xs:enumeration value="en"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="contractCanton" type="eCH-0007:cantonFlAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zuständiger Lehrvertragskanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="baseEducation" type="eCH-0260:baseEducationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufliche Grundbildung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hostCompany" type="eCH-0260:hostCompanyContractFormType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apprentice" type="eCH-0260:apprenticeContractFormType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Lernende Person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="representative" type="eCH-0260:representativeContractFormType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Gesetzliche Vertretung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="professionDetails" type="eCH-0260:professionDetailsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbezeichnung gemäss Vorgaben der Bildungsverordnung, Bildungsdauer und Probezeit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="otherProfessionDetails" type="eCH-0260:otherProfessionDetailsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Weitere Angaben zum Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="professionEducation" type="eCH-0260:professionEducationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schulische Bildung und überbetriebliche Kurse (üK)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="salary" type="eCH-0260:salaryType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Entschädigung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="workhours" type="eCH-0260:workingHoursType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Arbeitszeit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holidays" type="eCH-0260:holidaysType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ferien in Wochen pro Bildungsjahr</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="expenses" type="eCH-0260:expensesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsnotwendige Beschaffungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insurances" type="eCH-0260:insurancesType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Versicherungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentContractFormType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beilagen zum Lehrvertrag und weitere besondere Regelungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="signatures" type="eCH-0260:signaturesType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Informationen zu den Unterschriften</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachment" type="eCH-0260:attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beilagen zum Vertrag im PDF-Format</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Hilfsdatentypen Lehrvertragsformular-->
+	<xs:complexType name="attachmentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Beilagen</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pathFileName">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Pfad und Dateiname</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="250"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="documentType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Fachlicher Dokumenttyp </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="baseEducationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufliche Grundbildung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="isEFZ" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufliche Grundbildung mit eidg. Fähigkeitszeugnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isEBA" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufliche Grundbildung mit eidg. Berufsattest</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isShortenedVET" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Verkürzte berufliche Grundbildung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentContractFormType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Andere Grundbildung (Freitext-Feld)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="commentContractFormType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Kommentarfeld Lehrvertragsformular</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="300"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="hostCompanyContractFormType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="companyName" type="eCH-0108:unitNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Firma</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="street" type="eCH-0010:streetType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Strassenbezeichnungen (dies kann auch der Name einer Lokalität, etc. sein)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="houseNumber" type="eCH-0010:houseNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hausnummer (zu setzen, falls vorhanden)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="town" type="eCH-0010:townType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ortsname</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postleitzahl</xs:documentation>
+				</xs:annotation>
+				<xs:element name="swissZipCode" type="eCH-0010:swissZipCodeType"/>
+				<xs:element name="foreignZipCode" type="eCH-0010:foreignZipCodeType"/>
+			</xs:choice>
+			<xs:element name="phoneNumber" type="eCH-0046:phoneNumberType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0046:emailAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="apprenticeContractFormType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Lernende Person</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="officialName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nachname (gemäss Pass oder ID)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="firstName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vornamen (gemäss Pass oder ID)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="street" type="eCH-0010:streetType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Strassenbezeichnungen (dies kann auch der Name einer Lokalität, etc. sein)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="houseNumber" type="eCH-0010:houseNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hausnummer (zu setzen, falls vorhanden)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="town" type="eCH-0010:townType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ortsname</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postleitzahl</xs:documentation>
+				</xs:annotation>
+				<xs:element name="swissZipCode" type="eCH-0010:swissZipCodeType"/>
+				<xs:element name="foreignZipCode" type="eCH-0010:foreignZipCodeType"/>
+			</xs:choice>
+			<xs:element name="dateOfBirth" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geburtsdatum</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nativeLanguage" type="eCH-0011:languageType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Muttersprache</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sex" type="eCH-0044:sexType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geschlecht</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vn" type="eCH-0044:vnType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">AHV-Nummer 13-stellig (AHVN13)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumber" type="eCH-0046:phoneNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mobileNumber" type="eCH-0046:phoneNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mobiltelefonnummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0046:emailAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="placeOfOrigin" type="eCH-0010:townType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Heimatort (ohne Kantonsbezeichnung)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="canton" type="eCH-0007:cantonAbbreviationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="country" type="eCH-0008:countryNameShortType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Staat</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hasCPermit" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hat einen Ausländerausweis C</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hasBPermit" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hat einen Ausländerausweis B</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hasFPermit" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hat einen Ausländerausweis F</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="otherPermit" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">anderer Aufenthaltsstatus</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="representativeContractFormType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Gesetzliche Vertretung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="officialName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nachname (gemäss Pass oder ID)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="firstName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vornamen (gemäss Pass oder ID)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="street" type="eCH-0010:streetType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Strassenbezeichnungen (dies kann auch der Name einer Lokalität, etc. sein)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="houseNumber" type="eCH-0010:houseNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Hausnummer (zu setzen, falls vorhanden)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="town" type="eCH-0010:townType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ortsname</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Postleitzahl</xs:documentation>
+				</xs:annotation>
+				<xs:element name="swissZipCode" type="eCH-0010:swissZipCodeType"/>
+				<xs:element name="foreignZipCode" type="eCH-0010:foreignZipCodeType"/>
+			</xs:choice>
+			<xs:element name="sex" type="eCH-0044:sexType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geschlecht</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumber" type="eCH-0046:phoneNumberType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0046:emailAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="professionDetailsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsdetails</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="occupation">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbezeichnung</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Fachrichtung / Branche / Schwerpunkt</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="profile">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Profil</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="32"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="durationFrom" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bildungsdauer (Startdatum)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="durationTo" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bildungsdauer (Enddatum)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="durationTrialPeriod">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Dauer der Probezeit (1 bis 3 Monate)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="1"/>
+						<xs:maxInclusive value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="otherProfessionDetailsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Weitere Angaben zum Lehrbetrieb</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="VETtrainerName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/in Name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VETtrainerFirstName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/in Vorname</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="occupation">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Berufsbildner/in Beruf</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dateOfBirth" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/in Geburtsdatum</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="eCH-0046:emailAddressType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">E-Mail-Adresse Berufsbildner/in</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numberQualifiedPersons" type="xs:int">
+				<xs:annotation>
+					<xs:documentation xml:lang="de"/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="workweekPercentage" type="xs:int">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Total Stellenprozente aller Fachleute im Betrieb, die für die Höchstzahl der Lernenden massgeblich ist.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="trainingLocation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ausbildungsort (nur, wenn nicht identisch mit Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="isHostCompanyNetwork" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Die Ausbildung findet in einem Lehrbetriebsverbund statt.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="professionEducationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Schule und üK</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="schoolName">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zu besuchende Berufsfachschule</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="schoolLanguage">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Unterrichtssprache</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:language">
+						<xs:enumeration value="de"/>
+						<xs:enumeration value="fr"/>
+						<xs:enumeration value="it"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="mayAttendBM" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">«true», wenn die lernende Person den Berufsmaturitätsunterricht besucht, falls sie die Aufnahmebedingungen erfüllt. Ansonsten «false».</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsTravelExpenses" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Reisespesen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsMeals" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Verpflegung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsAccommodation" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Unterkunft</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsSchoolMaterial" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsElectronicDevices" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme elektronische Geräte</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="salaryType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Entschädigung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="grossSalary1stYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Entschädigung 1. Lehrjahr</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="perMonthWeekHour1stYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe Entschädigung pro Monat/Woche/Stunde (1. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Monat</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Woche</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Stunde</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="grossSalary2ndYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Entschädigung 2. Lehrjahr</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="perMonthWeekHour2ndYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe Entschädigung pro Monat/Woche/Stunde (2. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Monat</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Woche</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Stunde</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="grossSalary3rdYear" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Entschädigung 3. Lehrjahr</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="perMonthWeekHour3rdYear" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe Entschädigung pro Monat/Woche/Stunde (3. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Monat</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Woche</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Stunde</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="grossSalary4thYear" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Entschädigung 4. Lehrjahr</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="perMonthWeekHour4thYear" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe Entschädigung pro Monat/Woche/Stunde (4. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Monat</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Woche</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="3">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">pro Stunde</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="benefits" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zulagen</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="has13thMonth" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">13. Monatslohn</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="workingHoursType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Arbeitszeit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hoursPerWeek">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Stunden pro Woche</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Stunden pro Woche</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="workingDaysPerWeek">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Arbeitstage pro Woche</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation xml:lang="de">Arbeitstage pro Woche</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentContractFormType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kommentar (besondere Regelung)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="holidaysType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Ferien</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="holidayEntitlement1stYear" type="xs:int">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ferienanspruch pro Bildungsjahr (1. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holidayEntitlement2ndYear" type="xs:int">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ferienanspruch pro Bildungsjahr (2. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holidayEntitlement3rdYear" type="xs:int">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ferienanspruch pro Bildungsjahr (3. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holidayEntitlement4thYear" type="xs:int">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Ferienanspruch pro Bildungsjahr (4. Lehrjahr)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitHoliday">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Einheit (Tage/Wochen), in welcher die Feriendauern angegeben sind.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Tage</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Wochen</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="expensesType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Beschaffungen</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="personalToolsWorkClothes">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Die lernende Person benötigt die folgenden persönlichen Werkzeuge, Berufskleider usw.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="300"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="paidBy">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Übernahme der Beschaffungskosten</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Lernende Person (plus GV)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cleaningOfClothes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Übernahme der Reinigung der Berufskleider</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Lernende Person (plus GV)</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insurancesType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Versicherungen</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AIpercentageHostCompany">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Nichtberufsunfallversicherung durch Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+						<xs:minInclusive value="0.00"/>
+						<xs:maxInclusive value="100.00"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AIpercentageLearner" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Nichtberufsunfallversicherung durch Lernende Person / GV</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+						<xs:minInclusive value="0.00"/>
+						<xs:maxInclusive value="100.00"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="hasLossOfEarningsInsurance" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Krankenttaggeldversicherung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LEIpercentageHostCompany" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Krankenttaggeldversicherung durch Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+						<xs:minInclusive value="0.00"/>
+						<xs:maxInclusive value="100.00"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LEIpercentageLearner" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Krankenttaggeldversicherung durch Lernende Person / GV</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+						<xs:minInclusive value="0.00"/>
+						<xs:maxInclusive value="100.00"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="signaturesType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Unterschriften</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hostCompanySignatureConfirmation" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bestätigung der Unterschrift durch den Lehrbetrieb («true» = ja, «false» = nein)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apprenticeSignatureConfirmation" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bestätigung der Unterschrift durch die lernende Person («true» = ja, «false» = nein)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="representativeSignatureConfirmation" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bestätigung der Unterschrift durch die gesetzlichen Vertreter («true» = ja, «false» = nein). Falls diese nicht nötig ist, ist ebenfalls der Wert «true» zu liefern</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Rückmeldung Lehrvertragsformular-->
+	<!--Root-Element-->
+	<xs:complexType name="contractConfirmationStatusType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Status Lehrvertragsgenehmigung</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="educationRelationId" type="eCH-0260:educationRelationIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hostCompanyId" type="eCH-0260:hostCompanyIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="localId" type="eCH-0108:localIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">BUR-Nummer</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profession" type="eCH-0260:professionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beruf</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="officialName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nachname der lernenden Person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="firstName" type="eCH-0044:baseNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Alle Vornamen der lernenden Person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateOfBirth" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geburtsdatum der lernenden Person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="confirmationStatus" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Vertrag wurde vom kantonalen Amt genehmigt  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="journal" type="eCH-0260:attachmentType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Journal der Genehmigung im PDF-Format</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="VETRoot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rootElement" type="eCH-0260:contractFormType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
