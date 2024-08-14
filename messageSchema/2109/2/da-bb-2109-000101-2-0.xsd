@@ -70,7 +70,7 @@
 			<xs:documentation xml:lang="de">Fachliche Attribute der Nachricht</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="VETaccreditation" type="eCH-0260:VETaccreditationTerminationType" maxOccurs="unbounded"/>
+			<xs:element name="VETaccreditationTermination" type="eCH-0260:VETaccreditationTerminationType" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="message">
