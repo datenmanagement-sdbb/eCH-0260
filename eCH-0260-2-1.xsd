@@ -1078,6 +1078,11 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 					<xs:documentation xml:lang="de">Lehr-/Praktikumsbetrieb </xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="legalUnit" type="eCH-0260:legalUnitType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kontaktdaten des Unternehmens</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="VETtrainer" type="eCH-0260:VETtrainerType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Berufsbildner/in </xs:documentation>
@@ -1353,11 +1358,6 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 						<xs:documentation xml:lang="de">Steuerfeld Noten</xs:documentation>
 					</xs:annotation>
 					<xs:restriction base="xs:int">
-						<xs:enumeration value="0">
-							<xs:annotation>
-								<xs:documentation xml:lang="de">Kein Noteneintrag</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
 						<xs:enumeration value="1">
 							<xs:annotation>
 								<xs:documentation xml:lang="de">Noteneintrag</xs:documentation>
@@ -1627,8 +1627,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 			</xs:element>
 			<xs:element name="phoneNumber" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Telefonnummer
-</xs:documentation>
+					<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
@@ -1859,6 +1858,11 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 			<xs:element name="dateOfBirth" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Geburtsdatum (wenn vorhanden)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumber" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Telefonnummer</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="emailAddress" type="eCH-0260:emailContactType" minOccurs="0">
@@ -2103,6 +2107,20 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 				<xs:annotation>
 					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
 				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageOfCorrespondance" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0011:languageType">
+						<xs:enumeration value="de"/>
+						<xs:enumeration value="fr"/>
+						<xs:enumeration value="it"/>
+						<xs:enumeration value="rm"/>
+						<xs:enumeration value="en"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="VETtrainerRoleId">
 				<xs:simpleType>
