@@ -473,6 +473,11 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Datum der Auflösung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="educationTerminationReason" type="eCH-0260:educationTerminationReasonType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Auflösungsgrund</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="QPgradesType">
@@ -1154,6 +1159,7 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:length value="3"/>
+			<xs:pattern value="M\d{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="educationRelationIdType">
@@ -1162,6 +1168,15 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:pattern value="BVX[A-Z]{2}\d{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="educationTerminationReasonType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Auflösungsgrund</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:length value="3"/>
+			<xs:pattern value="T\d{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="eduSpecificationsType">
