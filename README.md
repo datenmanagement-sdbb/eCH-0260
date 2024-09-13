@@ -17,3 +17,11 @@ Release notes for version 2.1
 | #31  | Anpassung regexp in schoolId (Punkte erlauben) | | XSD, eCH-0260, Kap. 2.x  |
 | #30  | Wert 0 streichen in Steuerfeld Noten | XSD | eCH-0260, Kap. XXX |
 | #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
+| #28  | Kettenlehrverträge | - | - |
+| #27  | Thema 1: Repetitionen lösen neues Teilverhältnis aus | - | - |
+| #27  | Thema 2: Streichung isMainResponsible | - | - |
+| #27  | Thema 3: Neuer Meldungstyp für vBB (verantw. Berufsbildner) | - | - |
+| #27  | Best Practice / FAQ | - | - |
+
+
+
