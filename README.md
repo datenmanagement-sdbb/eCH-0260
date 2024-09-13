@@ -4,10 +4,16 @@ The currently valid and officially published version of eCH-0260 can be found at
 
 Further information on the introduction of the new data exchange processes ("HAKA-processes") can be found at https://www.sdbb.ch/datenmanagement/projekte/da-bbi
 
+Publizierte Versionen: 
+- eCH-0260 Version 2.0
+- DAK - Datenaustauschkonzept Version 3.0
+- SOLL - Soll-Datenaustauschprozesse Version 3.0
+
+
 Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #31  | Anpassung regexp in schoolId (Punkte erlauben) | XSD, eCH-0260, Kap. 2.x | |
-| #30  | bla, bla, bla    | XSD, eCH-0260, Kap. 2.x | |
-| #25  | bla, bla, bla    | Datenaustauschkonzept | |
+| #31  | Anpassung regexp in schoolId (Punkte erlauben) | | XSD, eCH-0260, Kap. 2.x  |
+| #30  | Wert 0 streichen in Steuerfeld Noten | XSD | eCH-0260, Kap. XXX |
+| #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
