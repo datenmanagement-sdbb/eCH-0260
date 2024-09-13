@@ -6,7 +6,8 @@ Further information on the introduction of the new data exchange processes ("HAK
 
 Release notes for version 2.1
 
-| Issue    | Beschreibung | Anpassungen |
-| -------- | ------- | ------- |
-| #30  | bla, bla, bla    | XSD, eCH-0260, Kap. 2.x |
-| #25  | bla, bla, bla    | Datenaustauschkonzept |
+| Issue    | Beschreibung | Erledigt | Offen |
+| -------- | ------- | ------- |------- |
+| #31  | Anpassung regexp in schoolId (Punkte erlauben) | XSD, eCH-0260, Kap. 2.x | |
+| #30  | bla, bla, bla    | XSD, eCH-0260, Kap. 2.x | |
+| #25  | bla, bla, bla    | Datenaustauschkonzept | |
