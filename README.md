@@ -26,12 +26,20 @@ Release notes for version 2.1
 | #24  | Neuer Mutationsgrund T05 (@Marc: betroffene Prozesse?) | SOLL Kap. 3.5.2 | XSD, eCH-0260 Kap. 2.16 (neu) |
 | #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | XSD (?), eCH-0260 |
 | #21  | regex für BUR-number falsch | AG-DA: Keine Anpassung | - |
-| #19  | legalUnit fehlt in educationContractType | - | - |
-| #18  | Best Practice / FAQ | XSD, eCH-0260 Kap. 4.14 | - |
-| #17  | Best Practice / FAQ | - | - |
-| #16  | Best Practice / FAQ | - | - |
-| #15  | Best Practice / FAQ | - | - |
-| #14  | Best Practice / FAQ | - | - |
+| #19  | legalUnit fehlt in educationContractType | XSD, eCH-0260 Kap. 4.14 | - |
+| #18  | Korrespondenzsprache fehlt für VETtrainer | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) | - |
+| #18  | Korrespondenzsprache fehlt für Lernende? | @Marc: Entschieden? | - |
+| #17  | Telefonnummer fehlt für "representatives" | XSD, eCH-0260 Kap. 4.37 (vorher 4.36) | - |
+| #16  | Geburtsdatum nicht Pflicht für VETtrainers @Marc Entscheid gefällt? | - | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) |
+| #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 |
+| #14  | QPgradesResponseType - Werteliste fehlt | @Marc: Wo muss die Liste publiziert werden? Anpassungen? | - |
+| #13  | Genauere Anweisungen Gesamtbestandsmeldungen | @Marc: Braucht es weitere Vorgaben? | - |
+| #12  | action-code GR5 nicht korrekt | DAK Kap. 5.6  | - |
+| #11  | Beschreibung onlineApplicationsType falsch | eCH-0260 Kap. 4.30 (vorher 4.29) | - |
+| #10  | Schema mit Abhängigkeiten nicht vollständig | eCH-0260 Anhang G (Abb. 2) | - |
+| #9  | In QPgradesType übermittelte Werte | @Marc: Anpassung eCH/DAK?  | - |
+| #8  | Redundanz in VETtrainerType  | @Marc: Entscheid ausstehend? | - |
+| #7  | @Marc: WEITERE? |  | - |
 
 
 
