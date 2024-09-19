@@ -24,11 +24,10 @@ Release notes for version 2.1
 | #26  | VET trainer obligatorisch, aber unbekannt | AG-DA: Keine Anpassung | - |
 | #25  | Txx Gründe für Mutationen können nicht übermittelt werden | XSD, eCH-0260 Kap. 2.16 (neu), 4.18 (neu), 3.11 | - |
 | #24  | Neuer Mutationsgrund T05 (@Marc: betroffene Prozesse?) | SOLL Kap. 3.5.2 | XSD, eCH-0260 Kap. 2.16 (neu) |
-| #23  | Best Practice / FAQ | - | - |
-| #22  | Best Practice / FAQ | - | - |
-| #21  | Best Practice / FAQ | - | - |
-| #19  | Best Practice / FAQ | - | - |
-| #18  | Best Practice / FAQ | - | - |
+| #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | XSD (?), eCH-0260 |
+| #21  | regex für BUR-number falsch | AG-DA: Keine Anpassung | - |
+| #19  | legalUnit fehlt in educationContractType | - | - |
+| #18  | Best Practice / FAQ | XSD, eCH-0260 Kap. 4.14 | - |
 | #17  | Best Practice / FAQ | - | - |
 | #16  | Best Practice / FAQ | - | - |
 | #15  | Best Practice / FAQ | - | - |
