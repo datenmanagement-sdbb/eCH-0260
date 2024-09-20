@@ -24,8 +24,8 @@ Release notes for version 2.1
 |~~#26~~| ~~VET trainer obligatorisch, aber unbekannt~~ | - | - |~~
 | #25  | Txx Gründe für Mutationen können nicht übermittelt werden | XSD, eCH-0260 Kap. 2.16 (neu), 4.18 (neu), 3.11 | - |
 | #24  | Neuer Mutationsgrund T05 | SOLL Kap. 3.5.2 | XSD, eCH-0260 Kap. 2.16 (neu) |
-| #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | XSD (?), eCH-0260 @Lars|
-| #21  | regex für BUR-number falsch | AG-DA: Keine Anpassung | - |
+| #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | - |
+| ~~#21~~  | ~~regex für BUR-number falsch~~ | - | - |
 | #19  | legalUnit fehlt in educationContractType | XSD, eCH-0260 Kap. 4.14 | - |
 | #18  | Korrespondenzsprache fehlt für VETtrainer | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) | - |
 | #18  | Korrespondenzsprache fehlt für Lernende? | @Marc: Entschieden? | - |
