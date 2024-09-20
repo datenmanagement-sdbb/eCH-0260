@@ -28,7 +28,7 @@ Release notes for version 2.1
 | ~~#21~~  | ~~regex für BUR-number falsch~~ | - | - |
 | #19  | legalUnit fehlt in educationContractType | XSD, eCH-0260 Kap. 4.14 | - |
 | #18  | Korrespondenzsprache fehlt für VETtrainer | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) | - |
-| #18  | Korrespondenzsprache fehlt für Lernende? | @Marc: Entschieden? | - |
+| #18  | Korrespondenzsprache fehlt für Lernende? | - | @AG-DA |
 | #17  | Telefonnummer fehlt für "representatives" | XSD, eCH-0260 Kap. 4.37 (vorher 4.36) | - |
 | #16  | Geburtsdatum nicht Pflicht für VETtrainers @Marc Entscheid gefällt? | - | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) |
 | #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 |
