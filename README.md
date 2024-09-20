@@ -33,7 +33,7 @@ Release notes for version 2.1
 | #17  | Telefonnummer fehlt für "representatives" | XSD, eCH-0260 Kap. 4.37 (vorher 4.36) | @AG-DA |
 | #16  | Geburtsdatum nicht Pflicht für VETtrainers | - | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) @AG-DA |
 | #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 @AG-DA |
-| #14  | QPgradesResponseType - Werteliste fehlt | @Marc: Wo muss die Liste publiziert werden? Anpassungen? | - |
+| #14  | QPgradesResponseType - Werteliste fehlt | - | separates Dokument publizieren |
 | #13  | Genauere Anweisungen Gesamtbestandsmeldungen | @Marc: Braucht es weitere Vorgaben? | - |
 | #12  | action-code GR5 nicht korrekt | DAK Kap. 5.6  | - |
 | #11  | Beschreibung onlineApplicationsType falsch | eCH-0260 Kap. 4.30 (vorher 4.29) | - |
