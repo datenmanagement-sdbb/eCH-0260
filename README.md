@@ -34,13 +34,11 @@ Release notes for version 2.1
 | #16  | Geburtsdatum nicht Pflicht für VETtrainers | - | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) @AG-DA |
 | #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 @AG-DA |
 | #14  | QPgradesResponseType - Werteliste fehlt | - | separates Dokument publizieren @AG-DA |
-| #13  | Genauere Anweisungen Gesamtbestandsmeldungen | @Marc: Braucht es weitere Vorgaben? | @AG-DA |
+| #13  | Genauere Anweisungen Gesamtbestandsmeldungen | - | @AG-DA |
 | #12  | action-code GR5 nicht korrekt | DAK Kap. 5.6  | - |
 | #11  | Beschreibung onlineApplicationsType falsch | eCH-0260 Kap. 4.30 (vorher 4.29) | - |
 | #10  | Schema mit Abhängigkeiten nicht vollständig | eCH-0260 Anhang G (Abb. 2) | - |
-| #9  | In QPgradesType übermittelte Werte | @Marc: Anpassung eCH/DAK?  | - |
-| #8  | Redundanz in VETtrainerType  | @Marc: Entscheid ausstehend? | @AG-DA |
-| #7  | @Marc: WEITERE? |  | - |
+| #9  | In QPgradesType übermittelte Werte | - | eCH-0260 oder DAK |
 
 
 
