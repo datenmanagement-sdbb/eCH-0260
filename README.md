@@ -14,6 +14,9 @@ Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+
+| #33  | Bereinigung Datenlieferung Berufsbildner/innen | - | XSD, eCH-0260, @Lars DAK/SOLL-Prozesse @Lukas  |
+| #32  | PKX-code ist missing in examAssignmentType | - | @AG-DA  |
 | #31  | Anpassung regexp in schoolId (Punkte erlauben) | - | XSD, eCH-0260, Kap. 2.14 @Lars  |
 | #30  | Wert 0 streichen in Steuerfeld Noten | XSD, eCH-0260, Kap. 4.22 (neu 4.23) | - |
 | #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
