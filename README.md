@@ -32,13 +32,13 @@ Release notes for version 2.1
 | #18  | Korrespondenzsprache fehlt für Lernende? | - | XSD, eCH-0260 Kap 4.4 und 4.5 (inkl. LightType) @Lars |
 | #17  | Telefonnummer fehlt für "representatives" | XSD, eCH-0260 Kap. 4.37 (vorher 4.36) | - |
 | #16  | Geburtsdatum nicht Pflicht für VETtrainers | - | - |
-| #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 @SDBB: Klären|
-| #14  | QPgradesResponseType - Werteliste fehlt | - | separates Dokument publizieren |
+| #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 @Lars|
+| #14  | QPgradesResponseType - Werteliste fehlt | - | @Marc: separates Dokument publizieren |
 | #13  | Genauere Anweisungen Gesamtbestandsmeldungen | - | - |
 | #12  | action-code GR5 nicht korrekt | DAK Kap. 5.6  | - |
 | #11  | Beschreibung onlineApplicationsType falsch | eCH-0260 Kap. 4.30 (vorher 4.29) | - |
 | #10  | Schema mit Abhängigkeiten nicht vollständig | eCH-0260 Anhang G (Abb. 2) | - |
-| #9  | In QPgradesType übermittelte Werte | - | eCH-0260 oder DAK |
+| #9  | In QPgradesType übermittelte Werte | - | ~~eCH-0260 oder~~ DAK @Marc |
 
 
 
