@@ -14,6 +14,7 @@ Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #34  | Schulorganisation über ZDB | - | XSD, eCH-0260, @Lars DAK/SOLL-Prozesse @Lukas  |
 | #33  | Bereinigung Datenlieferung Berufsbildner/innen | - | XSD, eCH-0260, @Lars DAK/SOLL-Prozesse @Lukas  |
 | #32  | PKX-code ist missing in examAssignmentType | - | @AG-DA  |
 | #31  | Anpassung regexp in schoolId (Punkte erlauben) | - | XSD, eCH-0260, Kap. 2.14 @Lars  |
