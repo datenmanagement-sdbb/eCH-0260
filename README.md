@@ -14,16 +14,16 @@ Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #31  | Anpassung regexp in schoolId (Punkte erlauben) | - | XSD, eCH-0260, Kap. 2.14  |
+| #31  | Anpassung regexp in schoolId (Punkte erlauben) | - | XSD, eCH-0260, Kap. 2.14 @Lars  |
 | #30  | Wert 0 streichen in Steuerfeld Noten | XSD, eCH-0260, Kap. 4.22 (neu 4.23) | - |
 | #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
-| #28  | Kettenlehrverträge | - | eCH-0260 Kap. 2.14 (TV) |
+| #28  | Kettenlehrverträge | - | DAK 3.9 (mehrere BV möglich bei KLV) @Lukas|
 | #27  | Thema 1: Repetitionen lösen neues Teilverhältnis aus | - | - |
 | #27  | Thema 2: Streichung isMainResponsible | - | - |
 | #27  | Thema 3: Neuer Meldungstyp für vBB (verantw. Berufsbildner) | - | - |
 |~~#26~~| ~~VET trainer obligatorisch, aber unbekannt~~ | - | - |~~
 | #25  | Txx Gründe für Mutationen können nicht übermittelt werden | XSD, eCH-0260 Kap. 2.16 (neu), 4.18 (neu), 3.11 | - |
-| #24  | Neuer Mutationsgrund T05 | SOLL Kap. 3.5.2 | XSD, eCH-0260 Kap. 2.16 (neu) |
+| #24  | Neuer Mutationsgrund T05 | SOLL Kap. 3.5.2 | XSD, eCH-0260 Kap. 2.16 (neu) @Lars |
 | #23  | BSX Code für schoolIdType | DAK 3.8 | - |
 | #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | - |
 | ~~#21~~  | ~~regex für BUR-number falsch~~ | - | - |
