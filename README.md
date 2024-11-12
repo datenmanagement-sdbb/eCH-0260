@@ -14,13 +14,13 @@ Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #34  | Schulorganisation über ZDB | - | XSD, eCH-0260, @Lars DAK/SOLL-Prozesse @Lukas  |
-| #33  | Bereinigung Datenlieferung Berufsbildner/innen | - | XSD, eCH-0260, @Lars DAK/SOLL-Prozesse @Lukas  |
+| #34  | Schulorganisation über ZDB | DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | XSD, eCH-0260, @Lars  |
+| #33  | Bereinigung Datenlieferung Berufsbildner/innen | DAK/SOLL: VA3 neu | XSD, eCH-0260, @Lars  |
 | #32  | PKX-code ist missing in examAssignmentType | - | @AG-DA  |
 | #31  | Anpassung regexp in schoolId (Punkte erlauben) | - | XSD, eCH-0260, Kap. 2.14 @Lars  |
 | #30  | Wert 0 streichen in Steuerfeld Noten | XSD, eCH-0260, Kap. 4.22 (neu 4.23) | - |
 | #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
-| #28  | Kettenlehrverträge | - | DAK 3.9 (mehrere BV möglich bei KLV) @Lukas|
+| #28  | Kettenlehrverträge | DAK 3.9 (mehrere BV möglich bei KLV) @Marc prfüen | - |
 | #27  | Thema 1: Repetitionen lösen neues Teilverhältnis aus | - | - |
 | #27  | Thema 2: Streichung isMainResponsible | - | - |
 | #27  | Thema 3: Neuer Meldungstyp für vBB (verantw. Berufsbildner) | - | - |
