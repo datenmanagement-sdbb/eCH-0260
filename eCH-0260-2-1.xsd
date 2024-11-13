@@ -68,6 +68,11 @@ Entwurf - Stand 02.04.2024
 					<xs:documentation xml:lang="de">Beruf</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="centrallyManaged" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe, ob die Lehrstellendaten zentral auf LSR gepflegt werden (false = nein, true = ja).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="legalUnit" type="eCH-0260:legalUnitType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kontaktdaten des Unternehmens</xs:documentation>
@@ -761,6 +766,20 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Korrespondenzadresse (falls abweichend zur Hauptadresse)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="languageOfCorrespondance">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0011:languageType">
+						<xs:enumeration value="de"/>
+						<xs:enumeration value="fr"/>
+						<xs:enumeration value="it"/>
+						<xs:enumeration value="rm"/>
+						<xs:enumeration value="en"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="firstLanguage" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Erstsprache (Codierung gemäss SDL)</xs:documentation>
@@ -824,6 +843,20 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 						<xs:documentation xml:lang="de">Korrespondenzadresse (falls abweichend zur Hauptadresse)</xs:documentation>
 					</xs:annotation>
 				</xs:element>
+				<xs:element name="languageOfCorrespondance">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrespondenzsprache</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0011:languageType">
+						<xs:enumeration value="de"/>
+						<xs:enumeration value="fr"/>
+						<xs:enumeration value="it"/>
+						<xs:enumeration value="rm"/>
+						<xs:enumeration value="en"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 				<xs:element name="firstLanguage" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation xml:lang="de">Erstsprache (Codierung gemäss SDL)</xs:documentation>
@@ -1620,11 +1653,6 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 					<xs:documentation xml:lang="de">BUR-Nummer</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="centrallyManaged" type="xs:boolean">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Angabe, ob die Lehrstellendaten zentral auf LSR gepflegt werden (false = nein, true = ja).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="organisationName" type="eCH-0010:organisationNameType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Name des Unternehmens</xs:documentation>
@@ -1912,7 +1940,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 			<xs:documentation xml:lang="de">Identifikator Berufsfachschule</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
-			<xs:pattern value="BS[A-Z]{1}[A-Za-z0-9_-]{1,47}"/>
+			<xs:pattern value="BS[A-Z]{1}[A-Za-z0-9_\-\.]{1,47}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="schoolKindType">
