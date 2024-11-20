@@ -14,6 +14,7 @@ Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #35  | Ergänzungen/Präzisierungen zum PPX-Code | - | eCH-0260, Kap. 2.14 (nur PDF), @Lars |
 | #34  | Schulorganisation über ZDB | DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | XSD, eCH-0260, @Lars  |
 | #33  | Bereinigung Datenlieferung Berufsbildner/innen | DAK/SOLL: VA3 neu | XSD, eCH-0260, @Lars  |
 | #32  | PKX-code ist missing in examAssignmentType | - | @AG-DA  |
