@@ -178,7 +178,7 @@ Entwurf - Stand 02.04.2024
 					<xs:documentation xml:lang="de">Kontaktdaten des Lehrorts</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="mainVETtrainer" type="eCH-0260:VETtrainerType" maxOccurs="unbounded">
+			<xs:element name="mainVETtrainer" type="eCH-0260:mainVETtrainerType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Berufsbildner</xs:documentation>
 				</xs:annotation>
@@ -274,6 +274,16 @@ Entwurf - Stand 02.04.2024
 			<xs:element name="examAssignmentKind" type="eCH-0260:examAssignmentKindType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Art der Prüfungszuweisung Art der Prüfungszuweisung (Zuweisung setzen, Zuweisung austragen)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examCanton" type="eCH-0007:cantonAbbreviationType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungskanton</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Durchführende Prüfungskommission</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="educationRelation" type="eCH-0260:educationRelationType">
@@ -1777,6 +1787,28 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 			<xs:element name="url" type="xs:anyURI" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="mainVETtrainerType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Berufsbildner mit zeitlich beschränkten Zugriffsrechten</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="VETtrainer" type="eCH-0260:VETtrainerType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/in</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFrom" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Startdatum der Gültigkeit des Zugriffsrechts</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validTo" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Letzter Tag der Gültigkeit des Zugriffsrechts</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
