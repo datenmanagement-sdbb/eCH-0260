@@ -14,11 +14,11 @@ Release notes for version 2.1
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #35  | Ergänzungen/Präzisierungen zum PPX-Code | - | eCH-0260, Kap. 2.14 (nur PDF), @Lars |
-| #34  | Schulorganisation über ZDB | DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | XSD, eCH-0260, @Lars  |
-| #33  | Bereinigung Datenlieferung Berufsbildner/innen | DAK/SOLL: VA3 neu | XSD, eCH-0260, @Lars  |
-| #32  | PKX-code ist missing in examAssignmentType | - | @AG-DA  |
-| #31  | Anpassung regexp in schoolId (Punkte erlauben) | - | XSD, eCH-0260, Kap. 2.14 @Lars  |
+| #35  | Ergänzungen/Präzisierungen zum PPX-Code | eCH-0260, Kap. 2.14 (nur PDF) | - |
+| #34  | Schulorganisation über ZDB | XSD, eCH-0260, DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | - |
+| #33  | Bereinigung Datenlieferung Berufsbildner/innen | XSD, eCH-0260, DAK/SOLL: VA3 neu | - |
+| #32  | PKX-code ist missing in examAssignmentType | XSD, eCH-0260 | - |
+| #31  | Anpassung regexp in schoolId (Punkte erlauben) | XSD, eCH-0260, Kap. 2.14 | - |
 | #30  | Wert 0 streichen in Steuerfeld Noten | XSD, eCH-0260, Kap. 4.22 (neu 4.23) | - |
 | #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
 | #28  | Kettenlehrverträge | DAK 3.9 (mehrere BV möglich bei KLV) @Marc prfüen | - |
@@ -27,16 +27,16 @@ Release notes for version 2.1
 | #27  | Thema 3: Neuer Meldungstyp für vBB (verantw. Berufsbildner) | - | - |
 |~~#26~~| ~~VET trainer obligatorisch, aber unbekannt~~ | - | - |~~
 | #25  | Txx Gründe für Mutationen können nicht übermittelt werden | XSD, eCH-0260 Kap. 2.16 (neu), 4.18 (neu), 3.11 | - |
-| #24  | Neuer Mutationsgrund T05 | SOLL Kap. 3.5.2 | XSD, eCH-0260 Kap. 2.16 (neu) @Lars |
+| #24  | Neuer Mutationsgrund T05 | XSD, eCH-0260 Kap. 2.16 (neu), SOLL Kap. 3.5.2 | - |
 | #23  | BSX Code für schoolIdType | DAK 3.8 | - |
 | #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | - |
 | ~~#21~~  | ~~regex für BUR-number falsch~~ | - | - |
 | #19  | legalUnit fehlt in educationContractType | XSD, eCH-0260 Kap. 4.14 | - |
 | #18  | Korrespondenzsprache fehlt für VETtrainer | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) | - |
-| #18  | Korrespondenzsprache fehlt für Lernende? | - | XSD, eCH-0260 Kap 4.4 und 4.5 (inkl. LightType) @Lars |
+| #18  | Korrespondenzsprache fehlt für Lernende? | XSD, eCH-0260 Kap 4.4 und 4.5 (inkl. LightType) | - |
 | #17  | Telefonnummer fehlt für "representatives" | XSD, eCH-0260 Kap. 4.37 (vorher 4.36) | - |
 | #16  | Geburtsdatum nicht Pflicht für VETtrainers | - | - |
-| #15  | "centrallyManaged" nur für LSR relevant | - | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 @Lars|
+| #15  | "centrallyManaged" nur für LSR relevant | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 | - |
 | #14  | QPgradesResponseType - Werteliste fehlt | @Marc: separates Dokument publizieren | - |
 | #13  | Genauere Anweisungen Gesamtbestandsmeldungen | - | - |
 | #12  | action-code GR5 nicht korrekt | DAK Kap. 5.6  | - |
