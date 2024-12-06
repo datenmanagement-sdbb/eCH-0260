@@ -163,11 +163,6 @@ Entwurf - Stand 02.04.2024
 					<xs:documentation xml:lang="de">Beruf</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="centrallyManaged" type="xs:boolean">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Angabe, ob die Lehrstellendaten zentral auf LSR gepflegt werden (false = nein, true = ja).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="legalUnit" type="eCH-0260:legalUnitType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kontaktdaten des Unternehmens</xs:documentation>
@@ -178,7 +173,7 @@ Entwurf - Stand 02.04.2024
 					<xs:documentation xml:lang="de">Kontaktdaten des Lehrorts</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="mainVETtrainer" type="eCH-0260:mainVETtrainerType" maxOccurs="unbounded">
+			<xs:element name="mainVETtrainers" type="eCH-0260:mainVETtrainerType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Berufsbildner</xs:documentation>
 				</xs:annotation>
@@ -603,14 +598,19 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="dbResponseCourseOrganisationType">
+	<xs:complexType name="dbResponseSchoolAndCourseOrganisationType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Daten zur üK-Organisation aus der zentralen Datenbank</xs:documentation>
+			<xs:documentation xml:lang="de">Daten zur Schul- und üK-Organisation aus der zentralen Datenbank</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="extendedEducationRelation" type="eCH-0260:extendedEducationRelationType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="educationRelation" type="eCH-0260:educationRelationType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Erweitertes Bildungsverhältnis</xs:documentation>
+					<xs:documentation xml:lang="de">Bildungsverhältnis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolAttendance" type="eCH-0260:schoolAttendanceType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Schulbesuchsdaten</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="mutationPerson" type="eCH-0260:mutationPersonType" minOccurs="0" maxOccurs="unbounded">
