@@ -244,23 +244,6 @@ Entwurf - Stand 02.04.2024
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="extendedEducationRelationType">
-		<xs:annotation>
-			<xs:documentation xml:lang="de">Erweitertes Bildungsverhältnis</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="educationRelation" type="eCH-0260:educationRelationType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Bildungsverhältnis</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="schoolYearDetails" type="eCH-0260:schoolYearDetailsType" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Schuljahrdetails</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="examAssignmentType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Prüfungszuweisung</xs:documentation>
