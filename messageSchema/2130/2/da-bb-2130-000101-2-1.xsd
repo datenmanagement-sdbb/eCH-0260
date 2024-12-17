@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0058="http://www.ech.ch/xmlns/eCH-0058/5" xmlns:eCH-0090="http://www.ech.ch/xmlns/eCH-0090/1" xmlns:eCH-0260="http://www.ech.ch/xmlns/eCH-0260/2" xmlns:da-bb-2116-000101="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2116/2" targetNamespace="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2116/2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0058="http://www.ech.ch/xmlns/eCH-0058/5" xmlns:eCH-0090="http://www.ech.ch/xmlns/eCH-0090/1" xmlns:eCH-0260="http://www.ech.ch/xmlns/eCH-0260/2" xmlns:da-bb-2130-000101="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2130/2" targetNamespace="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2130/2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0058/5" schemaLocation="http://www.ech.ch/xmlns/eCH-0058/5/eCH-0058-5-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0090/1" schemaLocation="http://www.ech.ch/xmlns/eCH-0090/1/eCH-0090-1-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0260/2" schemaLocation="http://www.ech.ch/xmlns/eCH-0260/2/eCH-0260-2-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0260/2" schemaLocation="../../../eCH-0260-2-1.xsd"/>
 	<xs:annotation>
-		<xs:documentation xml:lang="de">Meldung Lernendendaten an OdA</xs:documentation>
-		<xs:documentation xml:lang="fr">Annonce des données des apprentis/es à l'OrTra</xs:documentation>
-		<xs:documentation xml:lang="it">Annuncio dei dati degli apprendisti all'OML</xs:documentation>
+		<xs:documentation xml:lang="de">Mutation Personendaten</xs:documentation>
+		<xs:documentation xml:lang="fr">Mutation des données personnelles</xs:documentation>
+		<xs:documentation xml:lang="it">Mutazione dei dati personali</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="headerType">
 		<xs:annotation>
@@ -27,7 +27,7 @@
 			<xs:element name="messageType">
 				<xs:simpleType>
 					<xs:restriction base="eCH-0058:messageTypeType">
-						<xs:enumeration value="2116"/>
+						<xs:enumeration value="2130"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -70,7 +70,7 @@
 			<xs:documentation xml:lang="de">Fachliche Attribute der Nachricht</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="extendedEducationRelation" type="eCH-0260:extendedEducationRelationType" maxOccurs="unbounded"/>
+			<xs:element name="mutationPerson" type="eCH-0260:mutationPersonType" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="message">
@@ -79,10 +79,11 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="header" type="da-bb-2116-000101:headerType"/>
-				<xs:element name="content" type="da-bb-2116-000101:contentType"/>
+				<xs:element name="header" type="da-bb-2130-000101:headerType"/>
+				<xs:element name="content" type="da-bb-2130-000101:contentType"/>
 			</xs:sequence>
 			<xs:attribute name="minorVersion" type="xs:integer" use="required"/>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
+
