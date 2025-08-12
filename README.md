@@ -16,10 +16,10 @@ Release notes for version 2.1
 | -------- | ------- | ------- |------- |
 | #41  |  | | - |
 | #40  |  | | - |
-| #39  |  | | - |
+| #39  | Lieferung AHV-Nummer für Lernende/Berufsbildner | | - |
 | #38  |  |  | - |
-| #37  |  | | - |
-| #36  |  |  | - |
+| #37  | from - to-Datum ergänzen bei Meldungen aus zentraler Datenbank | | - |
+| #36  | Mehrere Mutationsgründe übermitteln |  | - |
 | #35  | Ergänzungen/Präzisierungen zum PPX-Code | eCH-0260, Kap. 2.14 (nur PDF) | - |
 | #34  | Schulorganisation über ZDB | XSD, eCH-0260, DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | - |
 | #33  | Bereinigung Datenlieferung Berufsbildner/innen | XSD, eCH-0260, DAK/SOLL: VA3 neu | - |
