@@ -10,7 +10,9 @@ Publizierte Versionen:
 - SOLL - Soll-Datenaustauschprozesse Version 3.0
 
 
-Release notes for version 2.1
+Release notes for version 2.2
+
+((Alles bis und mit 35 rausnehmen)) -> ab 36 in Tabelle aufführen.
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
