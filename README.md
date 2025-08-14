@@ -16,6 +16,25 @@ Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #53  |  | - | - |
+| #52  |  | - | - |
+| #51  |  | - | - |
+| #50  |  | - | - |
+| #49  |  | - | - |
+| #48  |  | - | - |
+| #47  |  | - | - |
+| #46  |  | - | - |
+| #45  |  | - | - |
+| #44  |  | - | - |
+| #43  | Umgang mit LV-Auflösungen | - | XSD(?), eCH-0260(?), DAK: M09 streichen @Lukas|
+| #42  | Umgang mit Schulbesuchsdaten | keine Anpassung | - |
+| #41  | Umgang mit Berufsbildnern | - | DAK? @Marc @Lukas |
+| #40  | Geschlecht bei gesetzlichen Vertretern nicht obligatorisch | - | ev. DAK @Lukas |
+| #39  | Lieferung AHV-Nummer für Lernende/Berufsbildner | - | XSD, eCH-0260 @Marc, @Lars |
+| #37  | from - to-Datum ergänzen bei Meldungen aus zentraler Datenbank | - | XSD, eCH-0260 (@Lars) |
+| #36  | Mehrere Mutationsgründe übermitteln | - | Übernahme Felder pro Mutationsgrund in DAK |
+
+
 | #35  | Ergänzungen/Präzisierungen zum PPX-Code | eCH-0260, Kap. 2.14 (nur PDF) | - |
 | #34  | Schulorganisation über ZDB | XSD, eCH-0260, DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | - |
 | #33  | Bereinigung Datenlieferung Berufsbildner/innen | XSD, eCH-0260, DAK/SOLL: VA3 neu | - |
