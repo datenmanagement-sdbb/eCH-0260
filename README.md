@@ -31,13 +31,13 @@ Release notes for version 2.2
 | #46  | Zwei LV mit gleicher LV-Nr. | - | DAK @Lukas @Marc |
 | #45  | Inconsistent naming | - | XSD, eCH-0260 @Marc, @Lars |
 | #44  | Umgang mit validTo im "VetAccreditationAndTrainerType" | - | XSD, eCH-0260 @Lars |
-| #43  | Umgang mit LV-Auflösungen | - | XSD(?), eCH-0260(?), DAK: M09 streichen @Lukas|
+| #43  | Umgang mit LV-Auflösungen | - | eCH-0260: M09 streichen @Lars; SOLL: M09 streichen @Lukas|
 | #42  | Umgang mit Schulbesuchsdaten | keine Anpassung | - |
-| #41  | Umgang mit Berufsbildnern | - | DAK? @Marc @Lukas |
+| #41  | Umgang mit Berufsbildnern | - | XSD, eCH-0260 @Lars|
 | #40  | Geschlecht bei gesetzlichen Vertretern nicht obligatorisch | - | ev. DAK @Lukas |
-| #39  | Lieferung AHV-Nummer für Lernende/Berufsbildner | - | XSD, eCH-0260 @Marc, @Lars |
-| #37  | from - to-Datum ergänzen bei Meldungen aus zentraler Datenbank | - | XSD, eCH-0260 (@Lars) |
-| #36  | Mehrere Mutationsgründe übermitteln | - | Übernahme Felder pro Mutationsgrund in DAK |
+| #39  | Lieferung AHV-Nummer für Lernende/Berufsbildner | - | XSD, eCH-0260 @Marc, @Lars -> zuerst AG-DA |
+| #37  | from - to-Datum ergänzen bei Meldungen aus zentraler Datenbank | - | XSD, eCH-0260 (@Lars), DAK anpassen (@Lukas) |
+| #36  | Mehrere Mutationsgründe übermitteln | Soll-Konzept Kapitel 5.3.1 | Übernahme Felder pro Mutationsgrund (s. Excel Mutatiosngründe) in DAK Anhang, Referenz Soll @Lukas|
 
 
 
