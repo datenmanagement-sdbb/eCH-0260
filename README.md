@@ -25,13 +25,13 @@ Release notes for version 2.2
 | #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | - | - |
 | #51  | Prüfung von Duplikaten im Schema | - | - |
 | #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | - | eCH-0260 @Lars |
-| #49  | Wie wird ein Klassenwechsel übermittelt? | - | - |
-| #48  | Wird MT7 auch interkantonal verwendet oder nur für die Meldung an Prüfungsorganisationen? | - | DAK @Lukas @Marc |
-| #47  | Wie kann in einer Erstlieferung eine Repetition übermittelt werden? | - | - |
-| #46  | Zwei LV mit gleicher LV-Nr. | - | DAK @Lukas @Marc |
-| #45  | Inconsistent naming | - | XSD, eCH-0260 @Marc, @Lars |
-| #44  | Umgang mit validTo im "VetAccreditationAndTrainerType" | - | XSD, eCH-0260 @Lars |
-| #43  | Umgang mit LV-Auflösungen | - | eCH-0260: M09 streichen @Lars; SOLL: M09 streichen @Lukas|
+| #49  | Wie wird ein Klassenwechsel übermittelt? | DAK 4.4.2.2 | - |
+| #48  | Wird MT7 auch interkantonal verwendet oder nur für die Meldung an Prüfungsorganisationen? | DAK 4.3.2.5 | - |
+| #47  | Wie kann in einer Erstlieferung eine Repetition übermittelt werden? | - | XSD, eCH-0260 rep.With... aufnehmen @Lars, DAK @Lukas|
+| #46  | Zwei LV mit gleicher LV-Nr. | - | DAK @Lukas |
+| #45  | Inconsistent naming | - | XSD, eCH-0260 @Lars |
+| #44  | Umgang mit validTo im "VetAccreditationAndTrainerType" | - | XSD, eCH-0260 @Lars, s. #41 |
+| #43  | Umgang mit LV-Auflösungen | - | eCH-0260: M09 streichen @Lars; SOLL: M09 streichen + beschreiben Aufl. TV TerminationType @Lukas|
 | #42  | Umgang mit Schulbesuchsdaten | keine Anpassung | - |
 | #41  | Umgang mit Berufsbildnern | - | XSD, eCH-0260 @Lars|
 | #40  | Geschlecht bei gesetzlichen Vertretern nicht obligatorisch | - | ev. DAK @Lukas |
