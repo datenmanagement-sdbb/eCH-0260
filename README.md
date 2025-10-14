@@ -12,10 +12,16 @@ Publizierte Versionen:
 
 Release notes for version 2.2
 
-((Alles bis und mit 35 rausnehmen)) -> ab 36 in Tabelle aufführen.
-
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #60  |  | - | - |
+| #59  |  | - | - |
+| #58  |  | - | - |
+| #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | - | - |
+| #56  | Frage zu Übernahme der Schulkosten | - | - |
+| #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | - | - |
+| #54  | Welche Prüfungskommission wird im examAssignmentType geliefert? | - | - |
+| #53  | Best Practice: Meldungen pro sedex-Datenlieferung | - | - |
 | #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | - | - |
 | #51  | Prüfung von Duplikaten im Schema | - | - |
 | #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | - | eCH-0260 @Lars |
