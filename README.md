@@ -18,12 +18,12 @@ Release notes for version 2.2
 | #59  |  | - | - |
 | #58  |  | - | - |
 | #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | - | - |
-| #56  | Frage zu Übernahme der Schulkosten | - | - |
-| #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | - | - |
-| #54  | Welche Prüfungskommission wird im examAssignmentType geliefert? | - | - |
-| #53  | Best Practice: Meldungen pro sedex-Datenlieferung | - | - |
-| #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | - | - |
-| #51  | Prüfung von Duplikaten im Schema | - | - |
+| #56  | Frage zu Übernahme der Schulkosten | - | eCH-0260 @Lars |
+| #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | - | XSD, eCH-0260 @Lars |
+| #54  | Welche Prüfungskommission wird im examAssignmentType geliefert? | - | XSD Version 2.2 @Lars |
+| #53  | Best Practice: Meldungen pro sedex-Datenlieferung | Keine Anpassung | - |
+| #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | Keine Anpassung | - |
+| #51  | Prüfung von Duplikaten im Schema | Keine Anpassung | - |
 | #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | - | eCH-0260 @Lars |
 | #49  | Wie wird ein Klassenwechsel übermittelt? | DAK 4.4.2.2 | - |
 | #48  | Wird MT7 auch interkantonal verwendet oder nur für die Meldung an Prüfungsorganisationen? | DAK 4.3.2.5 | - |
