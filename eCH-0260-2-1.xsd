@@ -46,7 +46,7 @@ Entwurf - Stand 17.12.2024
 					<xs:documentation xml:lang="de">Online-Bewerbungen</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="apprenticeshipPosting" type="eCH-0260:apprenticeshipType" maxOccurs="2">
+			<xs:element name="apprenticeshipPosting" type="eCH-0260:apprenticeshipPostingType" maxOccurs="2">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Lehrstellenausschreibung</xs:documentation>
 				</xs:annotation>
@@ -259,7 +259,7 @@ Entwurf - Stand 17.12.2024
 					<xs:documentation xml:lang="de">Prüfungskanton</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType">
+			<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Durchführende Prüfungskommission</xs:documentation>
 				</xs:annotation>
@@ -579,6 +579,8 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Abmeldung von einer Organisation</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="from" type="xs:date"/>
+			<xs:element name="to" type="xs:date"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="dbResponseSchoolAndCourseOrganisationType">
@@ -616,6 +618,8 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Auflösung Bildungsverhältnis</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="from" type="xs:date"/>
+			<xs:element name="to" type="xs:date"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!--Hilfsdatentypen-->
@@ -776,6 +780,11 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 			<xs:documentation xml:lang="de">Lernende Person</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="vn" type="eCH-0260:vnType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
@@ -920,7 +929,7 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="apprenticeshipType">
+	<xs:complexType name="apprenticeshipPostingType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Lehrstelle</xs:documentation>
 		</xs:annotation>
@@ -1453,7 +1462,7 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 						</xs:enumeration>
 						<xs:enumeration value="4">
 							<xs:annotation>
-								<xs:documentation xml:lang="de">Berufsmaturität (BMS)</xs:documentation>
+								<xs:documentation xml:lang="de">Keine Notenlieferung aufgrund Prüfung durch die BMS</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="5">
@@ -1789,7 +1798,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 					<xs:documentation xml:lang="de">Startdatum der Gültigkeit des Zugriffsrechts</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validTo" type="xs:date">
+			<xs:element name="validTo" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Letzter Tag der Gültigkeit des Zugriffsrechts</xs:documentation>
 				</xs:annotation>
@@ -2212,6 +2221,34 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="vnliType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Liechtensteinische 13-stellige Identifikationsnummer (IDN)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedLong">
+			<xs:minInclusive value="4380000000001"/>
+			<xs:maxInclusive value="4389999999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="vnType">
+		<xs:choice>
+			<xs:element name="vnch" type="eCH-0044:vnType"/>
+			<xs:element name="vnli" type="eCH-0260:vnliType"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="personIdentificationType">
+		<xs:sequence>
+			<xs:element name="vn" type="eCH-0260:vnType"/>
+			<xs:element name="localPersonId" type="eCH-0044:namedPersonIdType"/>
+			<xs:element name="otherPersonId" type="eCH-0044:namedPersonIdType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="euPersonId" type="eCH-0044:namedPersonIdType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="officialName" type="eCH-0044:baseNameType"/>
+			<xs:element name="firstName" type="eCH-0044:baseNameType"/>
+			<xs:element name="originalName" type="eCH-0044:baseNameType" minOccurs="0"/>
+			<xs:element name="sex" type="eCH-0044:sexType"/>
+			<xs:element name="dateOfBirth" type="eCH-0044:datePartiallyKnownType"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!--Lehrvertragsformular-->
