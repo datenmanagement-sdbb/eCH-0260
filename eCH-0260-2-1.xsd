@@ -275,12 +275,29 @@ Entwurf - Stand 17.12.2024
 Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="repetitionWithoutContract" type="xs:boolean" minOccurs="0">
+			<xs:element name="repetition">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Wiederholung ohne Lehrvertrag
-(false: nicht relevant/mit Lehrvertrag; 
-true: Wiederholung ohne Lehrvertrag)</xs:documentation>
+					<xs:documentation xml:lang="de">Wiederholung</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Keine Wiederholung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Wiederholung ohne Lehrvertrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Wiederholung mit Lehrvertrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="examElementInitial" type="eCH-0260:examElementInitialType" maxOccurs="unbounded">
 				<xs:annotation>
@@ -579,8 +596,16 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Abmeldung von einer Organisation</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="from" type="xs:date"/>
-			<xs:element name="to" type="xs:date"/>
+			<xs:element name="dataFrom" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Erster Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataTo" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Letzter Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="dbResponseSchoolAndCourseOrganisationType">
@@ -618,8 +643,16 @@ true: Wiederholung ohne Lehrvertrag)</xs:documentation>
 					<xs:documentation xml:lang="de">Auflösung Bildungsverhältnis</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="from" type="xs:date"/>
-			<xs:element name="to" type="xs:date"/>
+			<xs:element name="dataFrom" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Erster Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataTo" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Letzter Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!--Hilfsdatentypen-->
@@ -1619,7 +1652,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 						</xs:enumeration>
 						<xs:enumeration value="4">
 							<xs:annotation>
-								<xs:documentation xml:lang="de">Berufsmaturität (BMS)</xs:documentation>
+								<xs:documentation xml:lang="de">Keine Notenlieferung aufgrund Prüfung durch die BMS</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="5">
