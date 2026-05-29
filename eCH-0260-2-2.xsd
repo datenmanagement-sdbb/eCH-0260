@@ -1135,9 +1135,14 @@ Codeliste "Optionen Lehrstellenausschreibung", siehe https://www.sbbk.ch/dienstl
 Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen angeboten werden</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsSchoolMaterial" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsSchoolMaterialHostCompany" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial</xs:documentation>
+					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsSchoolMateriaApprentice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="branchCoursesOrganisationId" type="eCH-0260:branchCoursesOrganisationIdType" minOccurs="0">
@@ -2848,29 +2853,54 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					<xs:documentation xml:lang="de">«true», wenn die lernende Person den Berufsmaturitätsunterricht besucht, falls sie die Aufnahmebedingungen erfüllt. Ansonsten «false».</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsTravelExpenses" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsTravelExpensesHostCompany" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kostenübernahme Reisespesen</xs:documentation>
+					<xs:documentation xml:lang="de">Kostenübernahme Reisespesen Lehrbetrieb</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsMeals" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsTravelExpensesApprentice" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kostenübernahme Verpflegung</xs:documentation>
+					<xs:documentation xml:lang="de">Kostenübernahme Reisespesen lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsAccommodation" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsMealsHostCompany" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kostenübernahme Unterkunft</xs:documentation>
+					<xs:documentation xml:lang="de">Kostenübernahme Verpflegung Lehrbetrieb</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsSchoolMaterial" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsMealsApprentice" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial</xs:documentation>
+					<xs:documentation xml:lang="de">Kostenübernahme Verpflegung lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsElectronicDevices" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsAccommodationHostCompany" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kostenübernahme elektronische Geräte</xs:documentation>
+					<xs:documentation xml:lang="de">Kostenübernahme Unterkunft Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsAccommodationApprentice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Unterkunft lernende Person/gesetzliche Vertretung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsSchoolMaterialHostCompany" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsSchoolMaterialApprentice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial lernende Person/gesetzliche Vertretung</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsElectronicDevicesHostCompany" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme elektronische Geräte Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageOfCostsElectronicDevicesApprentice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kostenübernahme elektronische Geräte lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -3132,43 +3162,25 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="paidBy">
+			<xs:element name="paidByCompany" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Übernahme der Beschaffungskosten</xs:documentation>
+					<xs:documentation xml:lang="de">Übernahme der Beschaffungskosten Lehrbetrieb</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:int">
-						<xs:enumeration value="1">
-							<xs:annotation>
-								<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="2">
-							<xs:annotation>
-								<xs:documentation xml:lang="de">Lernende Person (plus GV)</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
-			<xs:element name="cleaningOfClothes" minOccurs="0">
+			<xs:element name="paidByApprentice" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Übernahme der Reinigung der Berufskleider</xs:documentation>
+					<xs:documentation xml:lang="de">Übernahme der Beschaffungskosten lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:int">
-						<xs:enumeration value="1">
-							<xs:annotation>
-								<xs:documentation xml:lang="de">Lehrbetrieb</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="2">
-							<xs:annotation>
-								<xs:documentation xml:lang="de">Lernende Person (plus GV)</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-					</xs:restriction>
-				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cleaningOfClothesCompany" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Übernahme der Reinigung der Berufskleider Lehrbetrieb</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cleaningOfClothesApprentice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Übernahme der Reinigung der Berufskleider lernende Person/gesetzliche Vertretung</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
