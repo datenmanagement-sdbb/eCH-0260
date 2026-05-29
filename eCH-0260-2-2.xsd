@@ -520,6 +520,11 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 					<xs:documentation xml:lang="de">Auflösungsgrund</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bemerkungen</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="QPgradesType">
@@ -1090,10 +1095,29 @@ Codeliste "Optionen Lehrstellenausschreibung", siehe https://www.sbbk.ch/dienstl
 					<xs:documentation xml:lang="de">Bildungsvertrag (Lehr-/Praktikumsvertrag)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="repetitionWithoutContract" type="xs:boolean" minOccurs="0">
+			<xs:element name="repetition">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Wiederholung ohne Lehrvertrag (false: nicht relevant/mit Lehrvertrag; true: Wiederholung ohne Lehrvertrag)</xs:documentation>
+					<xs:documentation xml:lang="de">Wiederholung</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Keine Wiederholung</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="1">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Wiederholung ohne Lehrvertrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="2">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Wiederholung mit Lehrvertrag</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="previousApprenticeshipContract" minOccurs="0">
 				<xs:annotation>
