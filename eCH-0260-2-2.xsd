@@ -596,7 +596,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 					<xs:documentation xml:lang="de">Erster Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dataTo" type="xs:date" minOccurs="0">
+			<xs:element name="dataTo" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Letzter Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
 				</xs:annotation>
@@ -643,7 +643,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 					<xs:documentation xml:lang="de">Erster Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dataTo" type="xs:date" minOccurs="0">
+			<xs:element name="dataTo" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Letzter Tag des Zeitraums, für welchen neue oder geänderte Datensätze in dieser Meldung geliefert werden.</xs:documentation>
 				</xs:annotation>
@@ -810,7 +810,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 		<xs:sequence>
 			<xs:element name="vn" type="eCH-0260:vnType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+					<xs:documentation xml:lang="de">AHV-Nr. (CH oder FL)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
@@ -2268,6 +2268,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 		<xs:choice>
 			<xs:element name="vnch" type="eCH-0044:vnType"/>
 			<xs:element name="vnli" type="eCH-0260:vnliType"/>
+			<xs:element name="unknown" type="xs:boolean" fixed="true"/>
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="personIdentificationType">
