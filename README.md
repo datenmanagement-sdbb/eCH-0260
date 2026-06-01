@@ -14,7 +14,13 @@ Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #60  |  | - | - |
+| #66  |  | - | - |
+| #65  | "Auslöser" für VA1 nicht vollständig | DAK 4.1.2.5 in Version 3.2 | - |
+| #64  | Falsches Format apprenticeshipPlaceOptions in XSD | XSD angepasst | - |
+| #63  | coverageOf... dürfen nicht boolean sein | XSD, eCH-0260 Kap. 4.11 und 5.10 | - |
+| #62  | Zu welchem Zweck dient "noteControl" im examAssignmentType | Keine, s.Nr. #  | - |
+| #61  | applicationContact auf apprenticeshipPlaceType: Korrekt oder eher VetAccreditationType | - | - |
+| #60  | Verwendung countryType aus eCH-0010 | eCH-0260 Kap. 4.4 und 4.5 sowie 2.13 | - |
 | #59  |  | - | - |
 | #58  |  | - | - |
 | #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | - | - |
