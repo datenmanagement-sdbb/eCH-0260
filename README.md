@@ -33,8 +33,8 @@ Release notes for version 2.2
 | #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | eCH-0260 | - |
 | #49  | Wie wird ein Klassenwechsel übermittelt? | DAK 4.4.2.2 | - |
 | #48  | Wird MT7 auch interkantonal verwendet oder nur für die Meldung an Prüfungsorganisationen? | DAK 4.3.2.5 | - |
-| #47  | Wie kann in einer Erstlieferung eine Repetition übermittelt werden? | DAK keine Anpassung (nur Ebene TV erwähnt) | XSD, eCH-0260 rep.With... aufnehmen @Lars @Lukas|
-| #46  | Zwei LV mit gleicher LV-Nr. | DAK 3.9.2 und 4.7.2.1/3/5 |  @Lukas |
+| #47  | Wie kann in einer Erstlieferung eine Repetition übermittelt werden? | DAK keine Anpassung (nur Ebene TV erwähnt), XSD, eCH-0260 Kap. 3.6 und 4.11 rep.With... aufnehmen | -|
+| #46  | Zwei LV mit gleicher LV-Nr. | DAK 3.9.2 und 4.7.2.1/3/5 | - |
 | #45  | Inconsistent naming | - | XSD, eCH-0260 @Lars |
 | #44  | Umgang mit validTo im "VetAccreditationAndTrainerType" | XSD, eCH-0260 @Lars, s. #41 | - |
 | #43  | Umgang mit LV-Auflösungen | SOLL 5.3.1, DAK 4.7.2.1/3/5/8 | eCH-0260: M09 streichen @Lars; @Lukas|
