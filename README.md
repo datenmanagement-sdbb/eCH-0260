@@ -30,7 +30,7 @@ Release notes for version 2.2
 | #53  | Best Practice: Meldungen pro sedex-Datenlieferung | Keine Anpassung | - |
 | #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | Keine Anpassung | - |
 | #51  | Prüfung von Duplikaten im Schema | Keine Anpassung | - |
-| #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | - | eCH-0260 @Lars |
+| #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | eCH-0260 | - |
 | #49  | Wie wird ein Klassenwechsel übermittelt? | DAK 4.4.2.2 | - |
 | #48  | Wird MT7 auch interkantonal verwendet oder nur für die Meldung an Prüfungsorganisationen? | DAK 4.3.2.5 | - |
 | #47  | Wie kann in einer Erstlieferung eine Repetition übermittelt werden? | DAK keine Anpassung (nur Ebene TV erwähnt) | XSD, eCH-0260 rep.With... aufnehmen @Lars @Lukas|
