@@ -21,8 +21,8 @@ Release notes for version 2.2
 | #62  | Zu welchem Zweck dient "noteControl" im examAssignmentType | Keine, s.Nr. #  | - |
 | #61  | applicationContact auf apprenticeshipPlaceType: Korrekt oder eher VetAccreditationType | - | - |
 | #60  | Verwendung countryType aus eCH-0010 | eCH-0260 Kap. 4.4 und 4.5 sowie 2.13 | - |
-| #59  |  | - | - |
-| #58  |  | - | - |
+| #59  | examAssignmnetType: Kanton doppelt vorhanden | XSD und eCH-0260 Kap. 3.6 | - |
+| #58  | Tippfehler representativeType XSD | XSD | - |
 | #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | - | - |
 | #56  | Frage zu Übernahme der Schulkosten | - | eCH-0260 @Lars |
 | #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | - | XSD, eCH-0260 @Lars |
