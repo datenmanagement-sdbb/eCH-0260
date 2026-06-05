@@ -23,10 +23,10 @@ Release notes for version 2.2
 | #60  | Verwendung countryType aus eCH-0010 | eCH-0260 Kap. 4.4 und 4.5 sowie 2.13 | - |
 | #59  | examAssignmnetType: Kanton doppelt vorhanden | XSD und eCH-0260 Kap. 3.6 | - |
 | #58  | Tippfehler representativeType XSD | XSD | - |
-| #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | - | - |
-| #56  | Frage zu Übernahme der Schulkosten | - | eCH-0260 @Lars |
-| #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | - | XSD, eCH-0260 @Lars |
-| #54  | Welche Prüfungskommission wird im examAssignmentType geliefert? | - | XSD Version 2.2 @Lars |
+| #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | XSD (Kommentar), eCH-0260 Kap. 3.11 | - |
+| #56  | Frage zu Übernahme der Schulkosten | wurde gelöst mit #63 | - |
+| #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | XSD, eCH-0260 4.23 und 4.25 | - |
+| #54  | Welche Prüfungskommission wird im examAssignmentType geliefert? | XSD Version 2.2 | - |
 | #53  | Best Practice: Meldungen pro sedex-Datenlieferung | Keine Anpassung | - |
 | #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | Keine Anpassung | - |
 | #51  | Prüfung von Duplikaten im Schema | Keine Anpassung | - |
