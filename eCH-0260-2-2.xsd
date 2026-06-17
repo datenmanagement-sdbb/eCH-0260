@@ -2108,7 +2108,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					<xs:documentation xml:lang="de">Identifikator Berufsfachschule Institution</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="schoolIdPlace" type="eCH-0260:schoolIdType">
+			<xs:element name="schoolIdPlace" type="eCH-0260:schoolIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Identifikator Berufsfachschule Standort</xs:documentation>
 				</xs:annotation>
@@ -2246,6 +2246,11 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			<xs:element name="VETtrainerId" type="eCH-0260:personIdType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Identifikator Berufsbildner</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vn" type="eCH-0260:vnType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">AHV-Nr. (CH oder FL)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="personIdentification" type="eCH-0044:personIdentificationType">
