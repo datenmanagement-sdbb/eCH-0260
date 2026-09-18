@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0058="http://www.ech.ch/xmlns/eCH-0058/5" xmlns:eCH-0090="http://www.ech.ch/xmlns/eCH-0090/1" xmlns:eCH-0260="http://www.ech.ch/xmlns/eCH-0260/2" xmlns:da-bb-2120-000101="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2120/2" targetNamespace="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2120/2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0058/5" schemaLocation="http://www.ech.ch/xmlns/eCH-0058/5/eCH-0058-5-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0090/1" schemaLocation="http://www.ech.ch/xmlns/eCH-0090/1/eCH-0090-1-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0260/2" schemaLocation="../../../eCH-0260-2-1.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0260/2" schemaLocation="../../../eCH-0260-2-2.xsd"/>
 	<xs:annotation>
 		<xs:documentation xml:lang="de">Meldung Noten an zentrale Datenbank</xs:documentation>
 		<xs:documentation xml:lang="fr">Communication des notes à la base de données centrale</xs:documentation>
@@ -56,6 +56,11 @@
 								<xs:documentation xml:lang="de">Anfrage</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
+						<xs:enumeration value="6">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Antwort</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -69,9 +74,10 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Fachliche Attribute der Nachricht</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="QPgrades" type="eCH-0260:QPgradesType" maxOccurs="unbounded"/>
-		</xs:sequence>
+		<xs:choice>
+			<xs:element name="QPgrades" type="eCH-0260:QPgradesType" maxOccurs="unbounded"/>	
+			<xs:element name="QPgradesResponse" type="eCH-0260:QPgradesResponsesType" maxOccurs="unbounded"/>
+		</xs:choice>
 	</xs:complexType>
 	<xs:element name="message">
 		<xs:annotation>
@@ -86,4 +92,3 @@
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
-
