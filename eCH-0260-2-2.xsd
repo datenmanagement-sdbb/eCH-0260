@@ -1140,7 +1140,7 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial Lehrbetrieb</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="coverageOfCostsSchoolMateriaApprentice" type="xs:boolean" minOccurs="0">
+			<xs:element name="coverageOfCostsSchoolMaterialApprentice" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kostenübernahme Schulmaterial lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
