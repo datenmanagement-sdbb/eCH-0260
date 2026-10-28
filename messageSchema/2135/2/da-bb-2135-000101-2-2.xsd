@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0058="http://www.ech.ch/xmlns/eCH-0058/5" xmlns:eCH-0090="http://www.ech.ch/xmlns/eCH-0090/1" xmlns:eCH-0260="http://www.ech.ch/xmlns/eCH-0260/2" xmlns:da-bb-2135-000101="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2135/2" targetNamespace="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2135/2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0058="http://www.ech.ch/xmlns/eCH-0058/5" xmlns:eCH-0090="http://www.ech.ch/xmlns/eCH-0090/1" xmlns:eCH-0260="http://www.ech.ch/xmlns/eCH-0260/2" xmlns:da-bb-2135-000101="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2135/2" targetNamespace="https://github.com/datenmanagement-sdbb/eCH-0260/blob/main/messageSchema/2135/2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.2">
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0058/5" schemaLocation="http://www.ech.ch/xmlns/eCH-0058/5/eCH-0058-5-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0090/1" schemaLocation="http://www.ech.ch/xmlns/eCH-0090/1/eCH-0090-1-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0260/2" schemaLocation="../../../eCH-0260-2-1.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0260/2" schemaLocation="../../../eCH-0260-2-2.xsd"/>
 	<xs:annotation>
 		<xs:documentation xml:lang="de">Auflösung Bildungsverhältnis</xs:documentation>
 		<xs:documentation xml:lang="fr">Résiliation du contrat de formation</xs:documentation>
