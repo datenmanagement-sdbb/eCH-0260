@@ -2300,8 +2300,10 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 	</xs:simpleType>
 	<xs:complexType name="vnType">
 		<xs:choice>
-			<xs:element name="vnch" type="eCH-0044:vnType"/>
-			<xs:element name="vnli" type="eCH-0260:vnliType"/>
+			<xs:sequence>
+				<xs:element name="vnch" type="eCH-0044:vnType" minOccurs="0"/>
+				<xs:element name="vnli" type="eCH-0260:vnliType" minOccurs="0"/>
+			</xs:sequence>
 			<xs:element name="unknown" type="xs:boolean" fixed="true"/>
 		</xs:choice>
 	</xs:complexType>
