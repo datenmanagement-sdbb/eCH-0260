@@ -1526,6 +1526,11 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 								<xs:documentation xml:lang="de">unentschuldigt nicht abgelegt</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
+						<xs:enumeration value="6">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">entschuldigt nicht abgelegt</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
