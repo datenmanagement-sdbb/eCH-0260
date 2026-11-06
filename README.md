@@ -5,9 +5,9 @@ The currently valid and officially published version of eCH-0260 can be found at
 Further information on the introduction of the new data exchange processes ("HAKA-processes") can be found at https://www.sdbb.ch/datenmanagement/projekte/da-bbi
 
 Publizierte Versionen: 
-- eCH-0260 Version 2.0 --> TBD
-- DAK - Datenaustauschkonzept Version 3.0 --> TBD
-- SOLL - Soll-Datenaustauschprozesse Version 3.0 --> TBD
+- eCH-0260 Version 2.2
+- DAK - Datenaustauschkonzept Version 3.2
+- SOLL - Soll-Datenaustauschprozesse Version 3.2
 
 
 Release notes for version 2.2
