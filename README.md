@@ -14,6 +14,7 @@ Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #70  | noteControl ergänzt mit Wert für "entschuldigt nicht abgelegtes Prüfungsfach" | XSD, eCH-0260 Kap. 4.23 | - |
 | #66  | Ergänzung, dass bei Volljährigen gesetzliche Vertreter im Normalfall nicht mitgeliefert werden | eCH-0260 Kap. 2.4 | - |
 | #65  | "Auslöser" für VA1 nicht vollständig | DAK 4.1.2.5 in Version 3.2 | - |
 | #64  | Falsches Format apprenticeshipPlaceOptions in XSD | XSD angepasst | - |
