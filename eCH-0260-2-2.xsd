@@ -1688,6 +1688,11 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 								<xs:documentation xml:lang="de">unentschuldigt nicht abgelegt</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
+						<xs:enumeration value="6">
+							<xs:annotation>
+								<xs:documentation xml:lang="de">entschuldigt nicht abgelegt</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
