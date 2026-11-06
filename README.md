@@ -14,7 +14,7 @@ Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #66  |  | - | - |
+| #66  | Ergänzung, dass bei Volljährigen gesetzliche Vertreter im Normalfall nicht mitgeliefert werden | eCH-0260 Kap. 2.4 | - |
 | #65  | "Auslöser" für VA1 nicht vollständig | DAK 4.1.2.5 in Version 3.2 | - |
 | #64  | Falsches Format apprenticeshipPlaceOptions in XSD | XSD angepasst | - |
 | #63  | coverageOf... dürfen nicht boolean sein | XSD, eCH-0260 Kap. 4.11 und 5.10 | - |
