@@ -728,7 +728,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+			<xs:element name="url" type="eCH-0260:urlType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">URL</xs:documentation>
 				</xs:annotation>
@@ -801,7 +801,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+			<xs:element name="url" type="eCH-0260:urlType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">URL</xs:documentation>
 				</xs:annotation>
@@ -999,7 +999,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 					<xs:documentation xml:lang="de">Bemerkungen</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="urlOnlineApplication" type="xs:anyURI" minOccurs="0">
+			<xs:element name="urlOnlineApplication" type="eCH-0260:urlType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">URL für Online-Bewerbung</xs:documentation>
 				</xs:annotation>
@@ -1778,7 +1778,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+			<xs:element name="url" type="eCH-0260:urlType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">URL</xs:documentation>
 				</xs:annotation>
@@ -1840,7 +1840,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 					<xs:documentation xml:lang="de">E-Mail-Adresse</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+			<xs:element name="url" type="eCH-0260:urlType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">URL</xs:documentation>
 				</xs:annotation>
@@ -2234,6 +2234,14 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="urlType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">URL mit Schema http oder https</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="[Hh][Tt][Tt][Pp][Ss]?://[^\s&lt;&gt;&quot;]+"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="VETaccreditationOptionsType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Optionen zur Bildungsbewilligung</xs:documentation>
