@@ -14,6 +14,8 @@ Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #67  | Strengere Prüfung auf korrekte URLs, urlType mit Regex-Prüfung | XSD, eCH-0260 Kap. 4.45 | - |
+| #72  | Diverse Inkonsistenzen zwischen XSD und PDF behoben | XSD, eCH-0260 PDF | - |
 | #70  | noteControl ergänzt mit Wert für "entschuldigt nicht abgelegtes Prüfungsfach" | XSD, eCH-0260 Kap. 4.23 | - |
 | #66  | Ergänzung, dass bei Volljährigen gesetzliche Vertreter im Normalfall nicht mitgeliefert werden | eCH-0260 Kap. 2.4 | - |
 | #65  | "Auslöser" für VA1 nicht vollständig | DAK 4.1.2.5 in Version 3.2 | - |
