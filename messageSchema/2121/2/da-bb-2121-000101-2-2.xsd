@@ -76,7 +76,7 @@
 		</xs:annotation>
 		<xs:choice>
 			<xs:element name="QPgrades" type="eCH-0260:QPgradesType" maxOccurs="unbounded"/>	
-			<xs:element name="QPgradesResponse" type="eCH-0260:QPgradesResponsesType" maxOccurs="unbounded"/>
+			<xs:element name="QPgradesResponse" type="eCH-0260:QPgradesResponseType" maxOccurs="unbounded"/>
 		</xs:choice>
 	</xs:complexType>
 	<xs:element name="message">

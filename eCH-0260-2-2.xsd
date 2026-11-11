@@ -554,7 +554,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="QPgradesResponsesType">
+	<xs:complexType name="QPgradesResponseType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Antwort auf QV-Noten</xs:documentation>
 		</xs:annotation>
@@ -2180,7 +2180,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			<xs:documentation xml:lang="de">Schuljahrdetails</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="schoolYear" type="xs:token">
+			<xs:element name="schoolYear" type="eCH-0260:schoolYearType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Schuljahr (im Format YYYY/YYYY)</xs:documentation>
 				</xs:annotation>
@@ -3165,7 +3165,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="paidByCompany" type="xs:boolean">
+			<xs:element name="paidByHostCompany" type="xs:boolean">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Übernahme der Beschaffungskosten Lehrbetrieb</xs:documentation>
 				</xs:annotation>
@@ -3175,7 +3175,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					<xs:documentation xml:lang="de">Übernahme der Beschaffungskosten lernende Person/gesetzliche Vertretung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="cleaningOfClothesCompany" type="xs:boolean" minOccurs="0">
+			<xs:element name="cleaningOfClothesHostCompany" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Übernahme der Reinigung der Berufskleider Lehrbetrieb</xs:documentation>
 				</xs:annotation>
@@ -3286,7 +3286,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="localId" type="eCH-0108:localIdType">
+			<xs:element name="localId" type="eCH-0108:localIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">BUR-Nummer</xs:documentation>
 				</xs:annotation>
@@ -3316,7 +3316,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					<xs:documentation xml:lang="de">Vertrag wurde vom kantonalen Amt genehmigt  </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="journal" type="eCH-0260:attachmentType">
+			<xs:element name="journal" type="eCH-0260:attachmentType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Journal der Genehmigung im PDF-Format</xs:documentation>
 				</xs:annotation>
