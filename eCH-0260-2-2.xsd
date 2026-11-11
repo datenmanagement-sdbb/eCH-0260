@@ -91,17 +91,17 @@ Entwurf V2-2 - Stand 29.05.2026
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
 							<xs:annotation>
-								<xs:documentation>keine Schnupperlehre(n)</xs:documentation>
+								<xs:documentation xml:lang="de">keine Schnupperlehre(n)</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="2">
 							<xs:annotation>
-								<xs:documentation>Schnupperlehre, keine Publikation</xs:documentation>
+								<xs:documentation xml:lang="de">Schnupperlehre, keine Publikation</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="3">
 							<xs:annotation>
-								<xs:documentation>Schnupperlehre mit Publikation </xs:documentation>
+								<xs:documentation xml:lang="de">Schnupperlehre mit Publikation</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 					</xs:restriction>
@@ -119,18 +119,18 @@ Entwurf V2-2 - Stand 29.05.2026
 				<xs:simpleType>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
-							<xs:annotation xml:lang="de">
-								<xs:documentation>keine Vorlehre(n)</xs:documentation>
+							<xs:annotation>
+								<xs:documentation xml:lang="de">keine Vorlehre(n)</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="2">
-							<xs:annotation xml:lang="de">
-								<xs:documentation>Vorlehre, keine Publikation</xs:documentation>
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Vorlehre, keine Publikation</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="3">
-							<xs:annotation xml:lang="de">
-								<xs:documentation>Vorlehre mit Publikation </xs:documentation>
+							<xs:annotation>
+								<xs:documentation xml:lang="de">Vorlehre mit Publikation</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 					</xs:restriction>
@@ -251,7 +251,7 @@ Entwurf V2-2 - Stand 29.05.2026
 		<xs:sequence>
 			<xs:element name="examAssignmentKind" type="eCH-0260:examAssignmentKindType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Art der Prüfungszuweisung Art der Prüfungszuweisung (Zuweisung setzen, Zuweisung austragen)</xs:documentation>
+					<xs:documentation xml:lang="de">Art der Prüfungszuweisung (Zuweisung setzen, Zuweisung austragen)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType" minOccurs="0">
@@ -576,7 +576,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 			</xs:element>
 			<xs:element name="examElementFinalResponse" type="eCH-0260:examElementFinalResponseType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Rückmeldung für die in der ursprünglichen Meldung gesendeten Prüfungselemente (Antwortcode). </xs:documentation>
+					<xs:documentation xml:lang="de">Rückmeldung für die in der ursprünglichen Meldung gesendeten Prüfungselemente (Antwortcode).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -869,12 +869,12 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 			</xs:element>
 			<xs:element name="email" type="eCH-0260:emailContactType" minOccurs="0" maxOccurs="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">E-Mail-Adressen (Schul-, Geschäft-, Privat). Typ beinhaltet sowohl E-Mail selbst als auch optionale Kategoriesierung.</xs:documentation>
+					<xs:documentation xml:lang="de">E-Mail-Adressen (Schul-, Geschäft-, Privat). Typ beinhaltet sowohl E-Mail selbst als auch optionale Kategorisierung.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Telefonnummern (Festnetz (Privat), Mobilnummer, all. Geschäft)</xs:documentation>
+					<xs:documentation xml:lang="de">Telefonnummern (Festnetz (Privat), Mobilnummer, allg. Geschäft)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="representative" type="eCH-0260:representativeType" minOccurs="0" maxOccurs="unbounded">
@@ -946,7 +946,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 				</xs:element>
 				<xs:element name="email" type="eCH-0260:emailContactType" minOccurs="0" maxOccurs="3">
 					<xs:annotation>
-						<xs:documentation xml:lang="de">E-Mail-Adressen (Schul-, Geschäft-, Privat). Typ beinhaltet sowohl E-Mail selbst als auch optionale Kategoriesierung.</xs:documentation>
+						<xs:documentation xml:lang="de">E-Mail-Adressen (Schul-, Geschäft-, Privat). Typ beinhaltet sowohl E-Mail selbst als auch optionale Kategorisierung.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="phone" type="eCH-0260:phoneContactType" minOccurs="0" maxOccurs="3">
@@ -1012,7 +1012,7 @@ Nicht zu liefern z. B. bei Repetenten ohne Lehrvertrag</xs:documentation>
 			<xs:element name="apprenticeshipPlaceOptions" type="eCH-0260:apprenticeshipPlaceOptionsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Optionen Lehrstellenausschreibung
-Codeliste "Optionen Lehrstellenausschreibung", siehe https://www.sbbk.ch/dienstleistungen/datenaustausch  </xs:documentation>
+Codeliste "Optionen Lehrstellenausschreibung", siehe https://www.sbbk.ch/dienstleistungen/datenaustausch</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="language" type="eCH-0011:languageType" minOccurs="0" maxOccurs="unbounded">
@@ -1045,7 +1045,7 @@ Codeliste "Optionen Lehrstellenausschreibung", siehe https://www.sbbk.ch/dienstl
 	</xs:simpleType>
 	<xs:simpleType name="branchCoursesOrganisationIdType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">üK-Organisiation</xs:documentation>
+			<xs:documentation xml:lang="de">üK-Organisation</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:pattern value="UK[A-Z]{1}[A-Za-z0-9_-]{1,47}"/>
@@ -1161,10 +1161,10 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="dispensationABU" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Dispens ABU</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Dispens ABU</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="0">
 							<xs:annotation>
@@ -1203,7 +1203,7 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 		<xs:sequence>
 			<xs:element name="hostCompany" type="eCH-0260:hostCompanyType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Lehr-/Praktikumsbetrieb </xs:documentation>
+					<xs:documentation xml:lang="de">Lehr-/Praktikumsbetrieb</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="legalUnit" type="eCH-0260:legalUnitType">
@@ -1213,7 +1213,7 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 			</xs:element>
 			<xs:element name="VETtrainer" type="eCH-0260:VETtrainerType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Berufsbildner/in </xs:documentation>
+					<xs:documentation xml:lang="de">Berufsbildner/in</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="additionalEducationRelationship" type="eCH-0260:additionalEducationRelationshipType" minOccurs="0" maxOccurs="unbounded">
@@ -1271,7 +1271,7 @@ Unterschiedliche Fächer können evtl. zukünftig in unterschiedlichen Schulen a
 			</xs:element>
 			<xs:element name="examCommissionId" type="eCH-0260:examCommissionIdType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Identifikator Prüfungskommission </xs:documentation>
+					<xs:documentation xml:lang="de">Identifikator Prüfungskommission</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1357,10 +1357,10 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="emailAddressCategory" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Art der E-Mail-Adresse</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Art der E-Mail-Adresse</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
 							<xs:annotation>
@@ -1424,10 +1424,10 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="examType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Prüfungsart</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Prüfungsart</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
 							<xs:annotation>
@@ -1443,10 +1443,10 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="assessmentType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bewertungsart</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Bewertungsart</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
 							<xs:annotation>
@@ -1491,10 +1491,10 @@ Bei Ausbildung nach Art. 32 können die Schulkosten vom Kanton übernommen werde
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="noteControl">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Steuerfeld Noten</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Steuerfeld Noten</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
 							<xs:annotation>
@@ -1745,7 +1745,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 		<xs:sequence>
 			<xs:element name="hostCompanyId" type="eCH-0260:hostCompanyIdType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe </xs:documentation>
+					<xs:documentation xml:lang="de">Identifikator für Lehrbetriebe</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="localId" type="eCH-0108:localIdType" minOccurs="0">
@@ -1805,6 +1805,9 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="legalUnitType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Unternehmen (rechtliche Einheit)</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="uid" type="eCH-0108:uidType">
 				<xs:annotation>
@@ -1878,12 +1881,12 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 			</xs:element>
 			<xs:element name="publishUrl" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">URL für Online-Bewerbung publizieren (falls «true»: Inhalte der Elemente «urlOnlineApplication» aus dem Element «apprenticeship» werden auf Lehrstellenportalen publiziert)</xs:documentation>
+					<xs:documentation xml:lang="de">URL für Online-Bewerbung publizieren (falls «true»: Inhalte der Elemente «urlOnlineApplication» aus dem Element «apprenticeshipPosting» werden auf Lehrstellenportalen publiziert)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="publishEmail" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">E-Mail für Online-Bewerbung publizieren (falls «true»: Inhalte der Elemente «emailOnlineApplication» aus dem Element «apprenticeship» werden auf Lehrstellenportalen publiziert)</xs:documentation>
+					<xs:documentation xml:lang="de">E-Mail für Online-Bewerbung publizieren (falls «true»: Inhalte der Elemente «emailOnlineApplication» aus dem Element «apprenticeshipPosting» werden auf Lehrstellenportalen publiziert)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1907,10 +1910,10 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="phoneNumberCategory" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Art der Telefonnummer</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Art der Telefonnummer</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="1">
 							<xs:annotation>
@@ -1939,7 +1942,7 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 	</xs:complexType>
 	<xs:complexType name="postOfficeBoxType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Postfacah</xs:documentation>
+			<xs:documentation xml:lang="de">Postfach</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="postOfficeBoxName">
@@ -2007,12 +2010,12 @@ Boolean mit Wert «true», falls Erleichterungen vom Prüfungsorgan vorliegen (d
 		<xs:sequence>
 			<xs:element name="representativeId" type="eCH-0260:personIdType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Identifikator Person </xs:documentation>
+					<xs:documentation xml:lang="de">Identifikator Person</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="mailAddress" type="eCH-0010:mailAddressType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Adresse, unterscheidet zwischen Personen und Organisationen (inkl. Ansprechperson) </xs:documentation>
+					<xs:documentation xml:lang="de">Adresse, unterscheidet zwischen Personen und Organisationen (inkl. Ansprechperson)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="vn" type="eCH-0044:vnType" minOccurs="0">
@@ -2154,7 +2157,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="comment" type="eCH-0260:commentType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Weitere Details </xs:documentation>
+					<xs:documentation xml:lang="de">Weitere Details</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2186,10 +2189,10 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="schoolTerm">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Semester</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Semester</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:int">
 						<xs:enumeration value="0">
 							<xs:annotation>
@@ -2219,9 +2222,6 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					<xs:documentation xml:lang="de">Klassenbezeichnung der Grundbildung</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Klassenbezeichnung der Grundbildung</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:token">
 						<xs:maxLength value="32"/>
 					</xs:restriction>
@@ -2294,6 +2294,9 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="vnType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Sozialversicherungsnummer CH/FL</xs:documentation>
+		</xs:annotation>
 		<xs:choice>
 			<xs:sequence>
 				<xs:element name="vnch" type="eCH-0044:vnType"/>
@@ -2304,6 +2307,9 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="personIdentificationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Personenidentifikation</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="vn" type="eCH-0260:vnType"/>
 			<xs:element name="localPersonId" type="eCH-0044:namedPersonIdType"/>
@@ -2398,7 +2404,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="holidays" type="eCH-0260:holidaysType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Ferien in Wochen pro Bildungsjahr</xs:documentation>
+					<xs:documentation xml:lang="de">Ferien pro Bildungsjahr</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="expenses" type="eCH-0260:expensesType" minOccurs="0">
@@ -2446,7 +2452,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="documentType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Fachlicher Dokumenttyp </xs:documentation>
+					<xs:documentation xml:lang="de">Fachlicher Dokumenttyp</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
@@ -2778,10 +2784,10 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="occupation">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berufsbildner/in Beruf</xs:documentation>
+				</xs:annotation>
 				<xs:simpleType>
-					<xs:annotation>
-						<xs:documentation xml:lang="de">Berufsbildner/in Beruf</xs:documentation>
-					</xs:annotation>
 					<xs:restriction base="xs:token">
 						<xs:maxLength value="50"/>
 					</xs:restriction>
@@ -2799,7 +2805,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="numberQualifiedPersons" type="xs:int">
 				<xs:annotation>
-					<xs:documentation xml:lang="de"/>
+					<xs:documentation xml:lang="de">Anzahl Fachleute im Betrieb, die für die Höchstzahl der Lernenden massgeblich ist.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="workweekPercentage" type="xs:int">
@@ -2809,7 +2815,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="trainingLocation" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Ausbildungsort (nur, wenn nicht identisch mit Lehrbetrieb</xs:documentation>
+					<xs:documentation xml:lang="de">Ausbildungsort (nur, wenn nicht identisch mit Lehrbetrieb)</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
@@ -3218,12 +3224,12 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="hasLossOfEarningsInsurance" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Krankenttaggeldversicherung</xs:documentation>
+					<xs:documentation xml:lang="de">Krankentaggeldversicherung</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LEIpercentageHostCompany" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Krankenttaggeldversicherung durch Lehrbetrieb</xs:documentation>
+					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Krankentaggeldversicherung durch Lehrbetrieb</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
@@ -3235,7 +3241,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 			</xs:element>
 			<xs:element name="LEIpercentageLearner" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Krankenttaggeldversicherung durch Lernende Person / GV</xs:documentation>
+					<xs:documentation xml:lang="de">Prozentuale Prämienübernahme der Krankentaggeldversicherung durch Lernende Person / GV</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:decimal">
