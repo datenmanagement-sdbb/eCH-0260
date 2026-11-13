@@ -14,6 +14,7 @@ Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
+| #75  | Anpassung auf das Lehrvertragsformular für Lehrbeginn 2027 | XSD, eCH-0260 PDF | - |
 | #74  | Globale Verwendung eCH-0260:personIdentificationType für AHV-Nummern CH und FL | XSD, eCH-0260 PDF | - |
 | #67  | Strengere Prüfung auf korrekte URLs, urlType mit Regex-Prüfung | XSD, eCH-0260 Kap. 4.45 | - |
 | #72  | Diverse Inkonsistenzen zwischen XSD und PDF behoben | XSD, eCH-0260 PDF | - |
