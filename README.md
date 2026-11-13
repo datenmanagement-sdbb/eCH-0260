@@ -5,44 +5,50 @@ The currently valid and officially published version of eCH-0260 can be found at
 Further information on the introduction of the new data exchange processes ("HAKA-processes") can be found at https://www.sdbb.ch/datenmanagement/projekte/da-bbi
 
 Publizierte Versionen: 
-- eCH-0260 Version 2.0
-- DAK - Datenaustauschkonzept Version 3.0
-- SOLL - Soll-Datenaustauschprozesse Version 3.0
+- eCH-0260 Version 2.2
+- DAK - Datenaustauschkonzept Version 3.2
+- SOLL - Soll-Datenaustauschprozesse Version 3.2
 
 
-Release notes for version 2.1
+Release notes for version 2.2
 
 | Issue    | Beschreibung | Erledigt | Offen |
 | -------- | ------- | ------- |------- |
-| #35  | Ergänzungen/Präzisierungen zum PPX-Code | eCH-0260, Kap. 2.14 (nur PDF) | - |
-| #34  | Schulorganisation über ZDB | XSD, eCH-0260, DAK/SOLL-Prozesse div. Anpassungen neue Grafiken und Meldungen | - |
-| #33  | Bereinigung Datenlieferung Berufsbildner/innen | XSD, eCH-0260, DAK/SOLL: VA3 neu | - |
-| #32  | PKX-code ist missing in examAssignmentType | XSD, eCH-0260 | - |
-| #31  | Anpassung regexp in schoolId (Punkte erlauben) | XSD, eCH-0260, Kap. 2.14 | - |
-| #30  | Wert 0 streichen in Steuerfeld Noten | XSD, eCH-0260, Kap. 4.22 (neu 4.23) | - |
-| #29  | Verarbeitungsreihenfolge präzisieren | DAK 3.1 Kap. 3.10 | - |
-| #28  | Kettenlehrverträge | DAK 3.9 (mehrere BV möglich bei KLV) @Marc prfüen | - |
-| #27  | Thema 1: Repetitionen lösen neues Teilverhältnis aus | - | - |
-| #27  | Thema 2: Streichung isMainResponsible | - | - |
-| #27  | Thema 3: Neuer Meldungstyp für vBB (verantw. Berufsbildner) | - | - |
-|~~#26~~| ~~VET trainer obligatorisch, aber unbekannt~~ | - | - |~~
-| #25  | Txx Gründe für Mutationen können nicht übermittelt werden | XSD, eCH-0260 Kap. 2.16 (neu), 4.18 (neu), 3.11 | - |
-| #24  | Neuer Mutationsgrund T05 | XSD, eCH-0260 Kap. 2.16 (neu), SOLL Kap. 3.5.2 | - |
-| #23  | BSX Code für schoolIdType | DAK 3.8 | - |
-| #22  | Schuldaten nicht bekannt bei Versand an VODEX | DAK Kap. 4.4.2.3 | - |
-| ~~#21~~  | ~~regex für BUR-number falsch~~ | - | - |
-| #19  | legalUnit fehlt in educationContractType | XSD, eCH-0260 Kap. 4.14 | - |
-| #18  | Korrespondenzsprache fehlt für VETtrainer | XSD, eCH-0260 Kap. 4.45 (vorher 4.44) | - |
-| #18  | Korrespondenzsprache fehlt für Lernende? | XSD, eCH-0260 Kap 4.4 und 4.5 (inkl. LightType) | - |
-| #17  | Telefonnummer fehlt für "representatives" | XSD, eCH-0260 Kap. 4.37 (vorher 4.36) | - |
-| #16  | Geburtsdatum nicht Pflicht für VETtrainers | - | - |
-| #15  | "centrallyManaged" nur für LSR relevant | XSD, eCH-0260 Kap. 4.28 (vorher 4.27) und 3.2 | - |
-| #14  | QPgradesResponseType - Werteliste fehlt | @Marc: separates Dokument publizieren | - |
-| #13  | Genauere Anweisungen Gesamtbestandsmeldungen | - | - |
-| #12  | action-code GR5 nicht korrekt | DAK Kap. 5.6  | - |
-| #11  | Beschreibung onlineApplicationsType falsch | eCH-0260 Kap. 4.30 (vorher 4.29) | - |
-| #10  | Schema mit Abhängigkeiten nicht vollständig | eCH-0260 Anhang G (Abb. 2) | - |
-| #9  | In QPgradesType übermittelte Werte | ~~eCH-0260 oder~~ DAK @Marc | - |
+| #75  | Anpassung auf das Lehrvertragsformular für Lehrbeginn 2027 | XSD, eCH-0260 PDF | - |
+| #74  | Globale Verwendung eCH-0260:personIdentificationType für AHV-Nummern CH und FL | XSD, eCH-0260 PDF | - |
+| #67  | Strengere Prüfung auf korrekte URLs, urlType mit Regex-Prüfung | XSD, eCH-0260 Kap. 4.45 | - |
+| #72  | Diverse Inkonsistenzen zwischen XSD und PDF behoben | XSD, eCH-0260 PDF | - |
+| #70  | noteControl ergänzt mit Wert für "entschuldigt nicht abgelegtes Prüfungsfach" | XSD, eCH-0260 Kap. 4.23 | - |
+| #66  | Ergänzung, dass bei Volljährigen gesetzliche Vertreter im Normalfall nicht mitgeliefert werden | eCH-0260 Kap. 2.4 | - |
+| #65  | "Auslöser" für VA1 nicht vollständig | DAK 4.1.2.5 in Version 3.2 | - |
+| #64  | Falsches Format apprenticeshipPlaceOptions in XSD | XSD angepasst | - |
+| #63  | coverageOf... dürfen nicht boolean sein | XSD, eCH-0260 Kap. 4.11 und 5.10 | - |
+| #62  | Zu welchem Zweck dient "noteControl" im examAssignmentType | Keine, s.Nr. #  | - |
+| #61  | applicationContact auf apprenticeshipPlaceType: Korrekt oder eher VetAccreditationType | - | - |
+| #60  | Verwendung countryType aus eCH-0010 | eCH-0260 Kap. 4.4 und 4.5 sowie 2.13 | - |
+| #59  | examAssignmnetType: Kanton doppelt vorhanden | XSD und eCH-0260 Kap. 3.6 | - |
+| #58  | Tippfehler representativeType XSD | XSD | - |
+| #57  | Wie kann übermittelt werden, dass trotz Auflösung die Schule noch besucht werden kann? | XSD (Kommentar), eCH-0260 Kap. 3.11 | - |
+| #56  | Frage zu Übernahme der Schulkosten | wurde gelöst mit #63 | - |
+| #55  | Welche Zweck hat der Wert 4 (BMS) des Elements noteControl | XSD, eCH-0260 4.23 und 4.25 | - |
+| #54  | Welche Prüfungskommission wird im examAssignmentType geliefert? | XSD Version 2.2 | - |
+| #53  | Best Practice: Meldungen pro sedex-Datenlieferung | Keine Anpassung | - |
+| #52  | Wie werden Mutationen von Prüfungszuweisungen übermittelt? | Keine Anpassung | - |
+| #51  | Prüfung von Duplikaten im Schema | Keine Anpassung | - |
+| #50  | Schreibfehler im VETaccreditationType, eCH-0260 Version 2.1.0  | eCH-0260 | - |
+| #49  | Wie wird ein Klassenwechsel übermittelt? | DAK 4.4.2.2 | - |
+| #48  | Wird MT7 auch interkantonal verwendet oder nur für die Meldung an Prüfungsorganisationen? | DAK 4.3.2.5 | - |
+| #47  | Wie kann in einer Erstlieferung eine Repetition übermittelt werden? | DAK keine Anpassung (nur Ebene TV erwähnt), XSD, eCH-0260 Kap. 3.6 und 4.11 rep.With... aufnehmen | -|
+| #46  | Zwei LV mit gleicher LV-Nr. | DAK 3.9.2 und 4.7.2.1/3/5 | - |
+| #45  | Inconsistent naming | XSD, eCH-0260 | - |
+| #44  | Umgang mit validTo im "VetAccreditationAndTrainerType" | XSD, eCH-0260, s. #41 | - |
+| #43  | Umgang mit LV-Auflösungen | SOLL 5.3.1, DAK 4.7.2.1/3/5/8 eCH-0260: M09 gestrichen | - |
+| #42  | Umgang mit Schulbesuchsdaten | keine Anpassung | - |
+| #41  | Umgang mit Berufsbildnern | XSD, eCH-0260 | - |
+| #40  | Geschlecht bei gesetzlichen Vertretern nicht obligatorisch | eCH-0260 Kapitel 2.4 | - |
+| #39  | Lieferung AHV-Nummer für Lernende/Berufsbildner | XSD, eCH-0260 4.4 | XSD, eCH-0260 4.46 |
+| #37  | from - to-Datum ergänzen bei Meldungen aus zentraler Datenbank | DAK 4.3.2 / 4.4.2 / 4.5.2, XSD, eCH-0260 Kap. 3.14 und 3.15 | - |
+| #36  | Mehrere Mutationsgründe übermitteln | Soll-Konzept Kapitel 5.3.1, Übernahme Felder pro Mutationsgrund (s. Excel Mutatiosngründe) in DAK, neuer Anhang A.2 / 4.7.2 | - |
 
 
 
