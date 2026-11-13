@@ -2139,7 +2139,7 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="schoolHalfDays" type="eCH-0260:schoolHalfDaysType">
+			<xs:element name="schoolHalfDays" type="eCH-0260:schoolHalfDaysType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Schulhalbtage</xs:documentation>
 				</xs:annotation>
