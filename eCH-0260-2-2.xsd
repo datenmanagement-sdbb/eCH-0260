@@ -2975,15 +2975,10 @@ Hinweis: Muss nicht mit Gültigkeitsdauer des Teilverhältnisses übereinstimmen
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="benefits" minOccurs="0">
+			<xs:element name="benefits" type="eCH-0260:commentContractFormType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Zulagen</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:decimal">
-						<xs:fractionDigits value="2"/>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element name="has13thMonth" type="xs:boolean">
 				<xs:annotation>
